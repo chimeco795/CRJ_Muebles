@@ -5,23 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Detalle del producto</title>
   <meta name="theme-color" content="#F29E5C">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=5">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="img/icon-192.png">
 </head>
 <body class="app-body">
   <header class="topbar topbar-detail">
     <a href="tienda.html" class="back-btn">
-      <span class="back-label">Atrás</span>
+
+      <span class="back-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </span>
+      <span class="back-text">Volver</span>
 
     </a>
     <span class="simple-title" id="prod-nombre-header">Detalle</span>
+    
+
+   
   </header>
   
 
   <main class="main-content">
     <article class="product-view">
-      <img id="prod-img" alt="">
+      <img id="prod-img" alt="">      
       <h1 id="prod-nombre"></h1>
       <h2 id="prod-precio"></h2>
       <p id="prod-desc"></p>
@@ -35,12 +44,55 @@
     </article>
   </main>
 
-  <nav class="bottom-nav">
-    <a href="index.html" class="nav-item"><span>Inicio</span></a>
-    <a href="tienda.html" class="nav-item nav-item-active"><span>Tienda</span></a>
-    <a href="https://wa.me/525537027887?text=Hola,%20quiero%20informaci%C3%B3n%20de%20muebles%20Montessori" class="nav-item"><span>WhatsApp</span></a>
-  </nav>
+<!-- BOTTOM NAV TIPO APP -->
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item"><span>Inicio</span></a>
+
+  <a href="tienda.html" class="nav-item">
+    <span class="icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="9" cy="21" r="1"/>
+        <circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+      </svg>
+    </span>
+    <span>Tienda</span>
+  </a>
+
+  <a href="https://wa.me/525537027887?text=Hola,%20quiero%20informaci%C3%B3n%20de%20muebles%20Montessori" class="nav-item">
+    <span>💬 WhatsApp</span>
+  </a>
+</nav>
+
 
   <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const nav = document.querySelector(".bottom-nav");
+      if (!nav) return;
+  
+      // Página actual (ej: "index.html" o "tienda.html")
+      let current = window.location.pathname.split("/").pop() || "index.html";
+  
+      // Quita activo previo (por si quedó en el HTML)
+      nav.querySelectorAll(".nav-item-active").forEach(a => a.classList.remove("nav-item-active"));
+  
+      // Marca como activo el link que coincide (solo links internos .html)
+      const links = nav.querySelectorAll('a.nav-item[href]');
+      for (const a of links) {
+        const href = a.getAttribute("href") || "";
+        if (!href.endsWith(".html")) continue; // ignora WhatsApp u otros externos
+  
+        const file = href.split("/").pop();
+        if (file === current) {
+          a.classList.add("nav-item-active");
+          break;
+        }
+      }
+    });
+  </script>
+
+ 
+  
 </body>
 </html>

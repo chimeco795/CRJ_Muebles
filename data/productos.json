@@ -4,7 +4,7 @@
     "nombre": "Cama suelo Montessori",
     "precio": 2890,
     "descripcion": "Cama baja en madera clara, pensada para que pueda subir y bajar sin ayuda. Bordes suaves y línea simple.",
-    "imagen": "img/cama1.webp",
+    "imagen": "public/img/products/montessori/cama-piso/mnt-cama-001/01-cover.webp",
     "linea": "montessori"
   },
   {
@@ -12,7 +12,7 @@
     "nombre": "Estante Montessori abierto",
     "precio": 1590,
     "descripcion": "Estante bajo para juguetes y libros. Todo a la vista, todo a su altura.",
-    "imagen": "img/estante1.webp",
+    "imagen": "public/img/products/montessori/estante/mnt-est-001/01-cover.webp",
     "linea": "montessori"
   },
   {
@@ -20,7 +20,7 @@
     "nombre": "Torre de aprendizaje",
     "precio": 2450,
     "descripcion": "Torre de observación para cocina o lavabo. Barandales sencillos y estructura estable.",
-    "imagen": "img/torre1.webp",
+    "imagen": "public/img/products/montessori/torre-aprendizaje/mnt-torre-001/01-cover.webp",
     "linea": "montessori"
   },
   {
@@ -28,7 +28,7 @@
     "nombre": "Mesa y silla baja",
     "precio": 1890,
     "descripcion": "Set de mesa y silla en madera clara para dibujo, rompecabezas y lectura.",
-    "imagen": "img/mesa1.webp",
+    "imagen": "public/img/products/montessori/mesa-silla/mnt-mesa-001/01-cover.webp",
     "linea": "montessori"
   },
   {
@@ -36,7 +36,7 @@
     "nombre": "Ropero bajo Montessori",
     "precio": 2650,
     "descripcion": "Ropero bajo para que pueda elegir su ropa. Barra accesible y uno o dos estantes.",
-    "imagen": "img/ropero1.webp",
+    "imagen": "public/img/products/montessori/ropero-closet/mnt-closet-001/01-cover.webp",
     "linea": "montessori"
   },
   {
@@ -44,7 +44,7 @@
     "nombre": "Librero frente",
     "precio": 1750,
     "descripcion": "Librero frente para que vea las portadas y pueda elegir fácilmente qué leer.",
-    "imagen": "img/librero1.webp",
+    "imagen": "public/img/products/montessori/librero-frente/mnt-lib-001/01-cover.webp",
     "linea": "montessori"
   }
 ]

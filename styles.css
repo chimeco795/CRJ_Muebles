@@ -2,20 +2,17 @@
   box-sizing: border-box;
 }
 
- 
 body.app-body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #FAF6F2;
-  /* marfil fresco */
+  background: #FAF6F2; /* marfil fresco */
   color: #3F3A34;
 }
 
 /* Layout base */
 .main-content {
   padding: 14px;
-  padding-bottom: 80px;
-  /* espacio nav inferior */
+  padding-bottom: 80px; /* espacio nav inferior */
 }
 
 /* Topbar */
@@ -25,8 +22,53 @@ body.app-body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
+/* === AJUSTE: Header de detalle (evita encimado) === */
 .topbar-detail {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;              /* altura cómoda del header */
+  padding: 10px 14px;            /* asegura padding consistente */
+}
+
+.simple-title {
+  font-size: 15px;
+  font-weight: 600;
+  flex: 1;                       /* ocupa el espacio restante */
+  text-align: center;            /* centra el título */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Botón atrás en detalle (ya no absoluto) */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #FAF6F2;
+  color: #3F3A34;
+  font-size: 12px;
+  text-decoration: none;
+  border: 1px solid rgba(63, 58, 52, 0.12);
+  flex: 0 0 auto;
+}
+
+.back-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Para que el título se vea realmente centrado aunque el botón esté a la izquierda,
+   reservamos un "espacio espejo" a la derecha (sin meter HTML extra) */
+.topbar-detail::after {
+  content: "";
+  width: 84px; /* aprox ancho del back-btn, ajusta si tu botón crece */
+  flex: 0 0 auto;
 }
 
 /* HEADER con logo grande a la izquierda y texto a la derecha */
@@ -50,8 +92,7 @@ body.app-body {
 }
 
 .logo-big {
-  max-width: 260px;
-  /* ajusta este valor si quieres más grande/chico */
+  max-width: 260px; /* ajusta este valor si quieres más grande/chico */
   width: 100%;
   height: auto;
 }
@@ -146,8 +187,7 @@ body.app-body {
 
 .link-small {
   font-size: 13px;
-  color: #7FB8A6;
-  /* verde suave para links */
+  color: #7FB8A6; /* verde suave para links */
   text-decoration: none;
 }
 
@@ -275,6 +315,11 @@ body.app-body {
   font-size: 12px;
   color: rgba(63, 58, 52, 0.6);
   text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .nav-item-active {
@@ -283,10 +328,6 @@ body.app-body {
 }
 
 /* Producto */
-.simple-title {
-  font-size: 15px;
-}
-
 .product-view {
   background: #FFFFFF;
   border-radius: 14px;
@@ -326,27 +367,6 @@ body.app-body {
   margin-top: 6px;
   font-size: 12px;
   color: rgba(63, 58, 52, 0.7);
-}
-
-/* Botón atrás en detalle */
-.back-btn {
-  position: absolute;
-  left: 12px;
-  top: 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: #FAF6F2;
-  color: #3F3A34;
-  font-size: 12px;
-  text-decoration: none;
-  border: 1px solid rgba(63, 58, 52, 0.12);
-}
-
-.back-icon {
-  font-size: 18px;
 }
 
 /* Desktop */
@@ -421,6 +441,8 @@ body.app-body {
     gap: 24px;
   }
 }
+
+/* === Catálogo filtros === */
 .catalog-filters {
   margin-top: 8px;
   display: flex;
@@ -428,50 +450,6 @@ body.app-body {
   gap: 8px;
 }
 
-.catalog-search {
-  width: 100%;
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(63, 58, 52, 0.18);
-  font-size: 13px;
-  background: #FFFFFF;
-}
-
-.business-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.filter-pill {
-  padding: 5px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(63, 58, 52, 0.18);
-  background: #FFFFFF;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.filter-pill-active {
-  background: #F29E5C;
-  border-color: #F29E5C;
-  color: #3F3A34;
-}
-
-@media (max-width: 480px) {
-  .business-filters {
-    gap: 4px;
-  }
-}
-
-.catalog-filters {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-/* fila: buscador + botón limpiar */
 .catalog-filters-row {
   display: flex;
   gap: 8px;
@@ -552,5 +530,10 @@ body.app-body {
 
   .catalog-clear {
     align-self: flex-end;
+  }
+
+  /* en móvil, el espacio espejo puede ser menor */
+  .topbar-detail::after {
+    width: 70px;
   }
 }

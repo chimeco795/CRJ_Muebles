@@ -14,11 +14,10 @@
 
   <!-- Bootstrap (solo CSS) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Font Awesome para iconos (por si quieres usarlos aquí también) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=5">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="img/icon-192.png">
 </head>
@@ -29,6 +28,7 @@
   <header class="topbar topbar-logo-full">
     <div class="header-hero-row">
       <div class="logo-wrapper">
+        <!-- Logo se queda igual -->
         <img src="img/logo-crj.png" alt="CRJ Muebles" class="logo-big">
       </div>
 
@@ -59,12 +59,12 @@
               class="catalog-search"
             >
           </div>
-      
+
           <button type="button" class="catalog-clear" id="clear-filters">
             Limpiar
           </button>
         </div>
-      
+
         <div class="business-filters">
           <button type="button" class="filter-pill filter-pill-active" data-linea="all">
             Todo
@@ -79,14 +79,16 @@
             A la medida
           </button>
         </div>
-      
-        <p id="catalog-summary" class="catalog-summary"></p>
-      </div>
-      
-      <div class="grid cards-grid" id="lista-productos"></div>
-      
 
-      <div class="grid cards-grid" id="lista-productos"></div>
+        <p id="catalog-summary" class="catalog-summary"></p>
+         
+      </div>
+
+      <!-- OJO: este DIV debe existir SOLO UNA VEZ -->
+      <!-- Nuevo root sugerido en app.js: "img/products/..." -->
+      <div class="grid cards-grid" id="lista-productos">
+ 
+      </div>
     </section>
 
     <!-- REDES (PIE SUAVE) -->
@@ -106,12 +108,64 @@
   <!-- BOTTOM NAV -->
   <nav class="bottom-nav">
     <a href="index.html" class="nav-item"><span>Inicio</span></a>
-    <a href="tienda.html" class="nav-item nav-item-active"><span>Tienda</span></a>
-    <a href="https://wa.me/525537027887?text=Hola,%20quiero%20informaci%C3%B3n%20de%20muebles"
-       class="nav-item"><span>WhatsApp</span></a>
+
+    <a href="tienda.html" class="nav-item">
+      <span class="icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+        </svg>
+      </span>
+      <span>Tienda</span>
+    </a>
+
+    <a href="https://wa.me/525537027887?text=Hola,%20quiero%20informaci%C3%B3n%20de%20muebles%20Montessori" class="nav-item">
+      <span>💬 WhatsApp</span>
+    </a>
   </nav>
 
   <script src="app.js"></script>
-</body>
-
-</html>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const nav = document.querySelector(".bottom-nav");
+      if (!nav) return;
+  
+      // Normaliza ruta actual (sin query ni hash)
+      const path = (window.location.pathname || "/").split("/").pop() || "index.html";
+      const current = path.split("?")[0].split("#")[0];
+  
+      // Limpia activo previo
+      nav.querySelectorAll(".nav-item-active").forEach(a => a.classList.remove("nav-item-active"));
+  
+      // Marca activo el link que coincide
+      const links = nav.querySelectorAll('a.nav-item[href]');
+      for (const a of links) {
+        const rawHref = a.getAttribute("href") || "";
+        if (!rawHref) continue;
+  
+        // Ignora externos (WhatsApp, http, mailto, etc.)
+        if (/^(https?:|mailto:|tel:|#)/i.test(rawHref)) continue;
+  
+        // Normaliza href (sin query ni hash)
+        const href = rawHref.split("?")[0].split("#")[0];
+        const file = href.split("/").pop();
+  
+        // Coincidencia exacta (tienda.html vs tienda.html)
+        if (file === current) {
+          a.classList.add("nav-item-active");
+          return;
+        }
+  
+        // Fallback: si estás en "/" y el link es index.html
+        if (current === "" || current === "/") {
+          if (file === "index.html") {
+            a.classList.add("nav-item-active");
+            return;
+          }
+        }
+      }
+    });
+  </script>
+  
+</body></html>
