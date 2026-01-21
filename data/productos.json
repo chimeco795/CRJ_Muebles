@@ -4,7 +4,7 @@
     "nombre": "Cama suelo Montessori",
     "precio": 2890,
     "descripcion": "Cama baja en madera clara, pensada para que pueda subir y bajar sin ayuda. Bordes suaves y línea simple.",
-    "imagen": "public/img/products/montessori/cama-piso/mnt-cama-001/01-cover.webp",
+    "imagen": "public/img/products/montessori/cama-piso/mnt-cama-001/01-cover.webp?v=2",
     "linea": "montessori"
   },
   {
@@ -46,5 +46,29 @@
     "descripcion": "Librero frente para que vea las portadas y pueda elegir fácilmente qué leer.",
     "imagen": "public/img/products/montessori/librero-frente/mnt-lib-001/01-cover.webp",
     "linea": "montessori"
+  },
+  {
+    "id": 7,
+    "nombre": "Tabla de picar Edge Grain",
+    "precio": 1350,
+    "descripcion": "Tabla de picar tipo Edge Grain. Excelente balance entre durabilidad y cuidado del filo.",
+    "imagen": "public/img/products/tablas-picar/edge-grain/tbg-edge-001/01-cover.webp",
+    "linea": "grill"
+  },
+  {
+    "id": 8,
+    "nombre": "Tabla de picar End Grain",
+    "precio": 1950,
+    "descripcion": "Tabla End Grain de alta resistencia. Ideal para uso intensivo y cuchillos finos.",
+    "imagen": "public/img/products/tablas-picar/end-grain/tbg-end-001/01-cover.webp",
+    "linea": "grill"
+  },
+  {
+    "id": 9,
+    "nombre": "Tabla de picar Large Grain",
+    "precio": 1650,
+    "descripcion": "Tabla Large Grain con veta marcada y estética robusta. Uso diario en cocina.",
+    "imagen": "public/img/products/tablas-picar/large-grain/tbg-large-001/01-cover.webp",
+    "linea": "grill"
   }
 ]
