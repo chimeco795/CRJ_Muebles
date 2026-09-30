@@ -1,98 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Detalle del producto</title>
-  <meta name="theme-color" content="#F29E5C">
-  <link rel="stylesheet" href="styles.css?v=5">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="img/icon-192.png">
-</head>
-<body class="app-body">
-  <header class="topbar topbar-detail">
-    <a href="tienda.html" class="back-btn">
-
-      <span class="back-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="15 18 9 12 15 6"/>
-        </svg>
-      </span>
-      <span class="back-text">Volver</span>
-
-    </a>
-    <span class="simple-title" id="prod-nombre-header">Detalle</span>
-    
-
-   
-  </header>
-  
-
-  <main class="main-content">
-    <article class="product-view">
-      <img id="prod-img" alt="">      
-      <h1 id="prod-nombre"></h1>
-      <h2 id="prod-precio"></h2>
-      <p id="prod-desc"></p>
-
-      <div class="product-actions">
-  
-        <a id="whatsapp-btn" class="btn primary">Cotizar por WhatsApp</a>
-
-      </div>
-      <p class="note-small">Hecho a mano. Adaptamos medidas y detalles para tu espacio.</p>
-    </article>
-  </main>
-
-<!-- BOTTOM NAV TIPO APP -->
-<nav class="bottom-nav">
-  <a href="index.html" class="nav-item"><span>Inicio</span></a>
-
-  <a href="tienda.html" class="nav-item">
-    <span class="icon">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="9" cy="21" r="1"/>
-        <circle cx="20" cy="21" r="1"/>
-        <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
-      </svg>
-    </span>
-    <span>Tienda</span>
-  </a>
-
-  <a href="https://wa.me/525537027887?text=Hola,%20quiero%20informaci%C3%B3n%20de%20muebles%20Montessori" class="nav-item">
-    <span>💬 WhatsApp</span>
-  </a>
-</nav>
-
-
-  <script src="app.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const nav = document.querySelector(".bottom-nav");
-      if (!nav) return;
-  
-      // Página actual (ej: "index.html" o "tienda.html")
-      let current = window.location.pathname.split("/").pop() || "index.html";
-  
-      // Quita activo previo (por si quedó en el HTML)
-      nav.querySelectorAll(".nav-item-active").forEach(a => a.classList.remove("nav-item-active"));
-  
-      // Marca como activo el link que coincide (solo links internos .html)
-      const links = nav.querySelectorAll('a.nav-item[href]');
-      for (const a of links) {
-        const href = a.getAttribute("href") || "";
-        if (!href.endsWith(".html")) continue; // ignora WhatsApp u otros externos
-  
-        const file = href.split("/").pop();
-        if (file === current) {
-          a.classList.add("nav-item-active");
-          break;
-        }
-      }
-    });
-  </script>
-
- 
-  
-</body>
-</html>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detalle de la pieza | CRJ Muebles</title><meta name="description" content="Conoce esta pieza del catálogo de CRJ Muebles y consulta sus detalles por WhatsApp.">
+<meta name="theme-color" content="#f8f6f1"><meta property="og:type" content="website"><meta property="og:locale" content="es_MX"><meta property="og:site_name" content="CRJ Muebles"><meta property="og:title" content="Detalle de la pieza | CRJ Muebles"><meta property="og:description" content="Conoce esta pieza del catálogo de CRJ Muebles y consulta sus detalles por WhatsApp.">
+<link rel="stylesheet" href="styles.css"><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="public/img/marca/icon-192.png"><link rel="apple-touch-icon" href="public/img/marca/icon-192.png"><script src="install.js" defer></script><script src="app.js" defer></script>
+</head><body data-page="product">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="CRJ Muebles, inicio"><img class="brand-logo" src="public/img/marca/logo-crj.png" alt="" width="72" height="80"><span class="brand-name">Muebles<span class="brand-subtitle">Madera · Diseño · Taller</span></span></a>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false">Menú <span aria-hidden="true">☰</span></button>
+<nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+<a href="index.html" data-nav="inicio">Inicio</a><a href="tienda.html?categoria=tablas" data-nav="tablas">Tablas</a><a href="tienda.html?categoria=muebles" data-nav="muebles">Muebles</a><a href="tienda.html?categoria=montessori" data-nav="montessori">Montessori</a><a href="tienda.html" data-nav="catalogo">Catálogo</a><button class="nav-install" type="button" data-install>Instalar app</button><a class="nav-contact" href="https://wa.me/525537027887" data-project-contact>Cotizar ↗</a>
+</nav></div></header>
+<div class="notice" id="offline-notice" role="status" hidden>Estás sin conexión. Puedes explorar las piezas guardadas; para consultar por WhatsApp necesitarás conectarte.</div>
+<div class="notice" id="update-notice" role="status" hidden>Hay una nueva versión disponible.<button type="button" id="update-button">Actualizar</button></div>
+<noscript><p>Activa JavaScript para explorar los productos. También puedes <a href="https://wa.me/525537027887">consultarnos por WhatsApp</a>.</p></noscript>
+<main class="container" id="contenido" tabindex="-1">
+<nav class="breadcrumb" aria-label="Regresar"><a class="text-link" href="tienda.html">← Volver al catálogo</a></nav><div id="product-detail" aria-busy="true"><p class="loading-state">Cargando pieza…</p></div>
+<section class="install-band" aria-labelledby="install-band-title"><img src="public/img/marca/icon-192.png" width="64" height="64" alt="" loading="lazy"><div><p class="eyebrow">CRJ en tu dispositivo</p><h2 id="install-band-title">El taller, siempre a mano.</h2><p>Instala la app para volver al catálogo y consultar las piezas que ya has visitado, incluso sin conexión.</p></div><button class="button button-secondary" type="button" data-install>Instalar app</button></section>
+<dialog id="install-dialog" class="install-dialog" aria-labelledby="install-title"><form method="dialog" class="dialog-close"><button class="button button-secondary" aria-label="Cerrar instrucciones de instalación">Cerrar ×</button></form><img class="install-icon" src="public/img/marca/icon-192.png" width="72" height="72" alt="Logo CRJ Muebles"><p class="eyebrow">Tu catálogo de madera</p><h2 id="install-title">Instalar CRJ Muebles</h2><p id="install-message" role="status"></p><button class="button button-primary" id="native-install" type="button" hidden>Instalar en este dispositivo</button><div class="install-instructions"><h3>Desde tu navegador</h3><p><strong>Chrome o Edge:</strong> busca la opción de instalar esta página como aplicación en el menú o en la barra de direcciones.</p><p><strong>iPhone o iPad:</strong> abre la página en Safari, entra en Compartir y selecciona Añadir a pantalla de inicio.</p><p>Si esta vista no ofrece instalación, abre la dirección en un navegador compatible.</p></div><label for="install-url">Dirección del sitio</label><div class="copy-row"><input id="install-url" type="url" readonly><button id="copy-install-url" class="button button-secondary" type="button">Copiar</button></div><p id="copy-status" class="small" role="status"></p><p class="small muted" id="local-install-note" hidden>Esta dirección local funciona solo en este equipo. Para instalar en un teléfono, utiliza la dirección pública del sitio.</p></dialog>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-top"><a class="brand" href="index.html" aria-label="CRJ Muebles, inicio"><img class="brand-logo" src="public/img/marca/logo-crj.png" alt="" width="72" height="80"><span class="brand-name">Muebles<span class="brand-subtitle">Madera · Diseño · Taller</span></span></a><nav aria-label="Enlaces del pie de página"><a href="tienda.html">Catálogo</a><a href="index.html#proyectos">Proyectos a la medida</a><a href="https://wa.me/525537027887">WhatsApp · 55 3702 7887 ↗</a></nav></div><div class="footer-bottom"><p>© <span data-year>2026</span> CRJ Muebles</p><p>Diseño y fabricación en CDMX.</p><p id="pwa-status" role="status"></p></div></div></footer>
+</body></html>

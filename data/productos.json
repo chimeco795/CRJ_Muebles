@@ -4,15 +4,16 @@
     "nombre": "Cama suelo Montessori",
     "precio": 2890,
     "descripcion": "Cama baja en madera clara, pensada para que pueda subir y bajar sin ayuda. Bordes suaves y línea simple.",
-    "imagen": "public/img/products/montessori/cama-piso/mnt-cama-001/01-cover.webp?v=2",
-    "linea": "montessori"
+    "imagen": "public/img/products/montessori/cama-piso/mnt-cama-001/01-cover.webp",
+    "linea": "montessori",
+    "destacado": 3
   },
   {
     "id": 2,
     "nombre": "Estante Montessori abierto",
     "precio": 1590,
     "descripcion": "Estante bajo para juguetes y libros. Todo a la vista, todo a su altura.",
-    "imagen": "public/img/products/montessori/estante/mnt-est-001/01-cover.webp",
+    "imagen": null,
     "linea": "montessori"
   },
   {
@@ -20,7 +21,7 @@
     "nombre": "Torre de aprendizaje",
     "precio": 2450,
     "descripcion": "Torre de observación para cocina o lavabo. Barandales sencillos y estructura estable.",
-    "imagen": "public/img/products/montessori/torre-aprendizaje/mnt-torre-001/01-cover.webp",
+    "imagen": null,
     "linea": "montessori"
   },
   {
@@ -28,7 +29,7 @@
     "nombre": "Mesa y silla baja",
     "precio": 1890,
     "descripcion": "Set de mesa y silla en madera clara para dibujo, rompecabezas y lectura.",
-    "imagen": "public/img/products/montessori/mesa-silla/mnt-mesa-001/01-cover.webp",
+    "imagen": null,
     "linea": "montessori"
   },
   {
@@ -36,7 +37,7 @@
     "nombre": "Ropero bajo Montessori",
     "precio": 2650,
     "descripcion": "Ropero bajo para que pueda elegir su ropa. Barra accesible y uno o dos estantes.",
-    "imagen": "public/img/products/montessori/ropero-closet/mnt-closet-001/01-cover.webp",
+    "imagen": null,
     "linea": "montessori"
   },
   {
@@ -44,7 +45,7 @@
     "nombre": "Librero frente",
     "precio": 1750,
     "descripcion": "Librero frente para que vea las portadas y pueda elegir fácilmente qué leer.",
-    "imagen": "public/img/products/montessori/librero-frente/mnt-lib-001/01-cover.webp",
+    "imagen": null,
     "linea": "montessori"
   },
   {
@@ -52,23 +53,119 @@
     "nombre": "Tabla de picar Edge Grain",
     "precio": 1350,
     "descripcion": "Tabla de picar tipo Edge Grain. Excelente balance entre durabilidad y cuidado del filo.",
-    "imagen": "public/img/products/tablas-picar/edge-grain/tbg-edge-001/01-cover.webp",
-    "linea": "grill"
+    "imagen": "public/img/products/tablas-picar/edge-grain/tbg-edge-001/ba6fa31a-9830-43ea-afa6-bb5c477569fc.webp",
+    "linea": "tablas",
+    "destacado": 1,
+    "galeria": [
+      "public/img/products/tablas-picar/rayas/web/detalle.webp",
+      "public/img/products/tablas-picar/rayas/web/conjunto.webp"
+    ]
   },
   {
     "id": 8,
     "nombre": "Tabla de picar End Grain",
     "precio": 1950,
     "descripcion": "Tabla End Grain de alta resistencia. Ideal para uso intensivo y cuchillos finos.",
-    "imagen": "public/img/products/tablas-picar/end-grain/tbg-end-001/01-cover.webp",
-    "linea": "grill"
+    "imagen": null,
+    "linea": "tablas"
   },
   {
     "id": 9,
     "nombre": "Tabla de picar Large Grain",
     "precio": 1650,
     "descripcion": "Tabla Large Grain con veta marcada y estética robusta. Uso diario en cocina.",
-    "imagen": "public/img/products/tablas-picar/large-grain/tbg-large-001/01-cover.webp",
-    "linea": "grill"
+    "imagen": null,
+    "linea": "tablas"
+  },
+  {
+    "id": 10,
+    "nombre": "Tabla de madera con mango",
+    "precio": null,
+    "descripcion": "Tabla rectangular con mango integrado. Una pieza para preparar y presentar en la cocina.",
+    "imagen": "public/img/products/tablas-picar/con-mango/web/portada.webp",
+    "linea": "tablas",
+    "galeria": [],
+    "detalles": [
+      "Mango integrado en la pieza.",
+      "Consulta medidas y opciones antes de cotizar."
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Organizador con cajón",
+    "precio": null,
+    "descripcion": "Dos niveles abiertos y un cajón para reunir tus objetos cotidianos. Explora sus vistas y consulta cómo integrarlo a tu espacio.",
+    "imagen": "public/img/products/muebles/organizador-con-cajon/web/portada.webp",
+    "linea": "muebles",
+    "galeria": [
+      "public/img/products/muebles/organizador-con-cajon/web/cajon.webp",
+      "public/img/products/muebles/organizador-con-cajon/web/detalle.webp",
+      "public/img/products/muebles/organizador-con-cajon/web/lateral.webp"
+    ],
+    "detalles": [
+      "Estantes abiertos y cajón frontal.",
+      "Consulta las medidas de esta pieza."
+    ],
+    "destacado": 2
+  },
+  {
+    "id": 12,
+    "nombre": "Especiero de bandejas",
+    "precio": null,
+    "descripcion": "Un organizador de tres niveles para tener a la vista los objetos que usas en la cocina. Las fotografías muestran la pieza en el taller.",
+    "imagen": "public/img/products/muebles/especiero-bandejas/web/portada.webp",
+    "linea": "muebles",
+    "galeria": [
+      "public/img/products/muebles/especiero-bandejas/web/frente.webp",
+      "public/img/products/muebles/especiero-bandejas/web/lateral.webp"
+    ],
+    "detalles": [
+      "Tres bandejas en una estructura de madera.",
+      "Consulta medidas y acabado."
+    ]
+  },
+  {
+    "id": 13,
+    "nombre": "Cama de madera para mascota",
+    "precio": null,
+    "descripcion": "Una cama de madera con entrada frontal rebajada. Cuéntanos el tamaño de tu mascota y el espacio donde quieres colocarla.",
+    "imagen": "public/img/products/muebles/cama-mascota/web/portada.webp",
+    "linea": "muebles",
+    "galeria": [
+      "public/img/products/muebles/cama-mascota/web/perspectiva.webp",
+      "public/img/products/muebles/cama-mascota/web/estructura.webp"
+    ],
+    "detalles": [
+      "Estructura elevada con acceso frontal.",
+      "Consulta medidas y qué incluye la cotización."
+    ]
+  },
+  {
+    "id": 14,
+    "nombre": "Mesa con insertos",
+    "precio": null,
+    "descripcion": "Una superficie de trabajo con espacios para insertos. Consulta este proyecto y las necesidades de tu cocina o zona de servicio.",
+    "imagen": "public/img/products/muebles/mesa-insertos/web/portada.webp",
+    "linea": "muebles",
+    "galeria": [
+      "public/img/products/muebles/mesa-insertos/web/detalle.webp"
+    ],
+    "detalles": [
+      "Cubierta con seis espacios para insertos.",
+      "Configuración y accesorios a confirmar en la cotización."
+    ]
+  },
+  {
+    "id": 15,
+    "nombre": "Bandeja de madera a rayas",
+    "precio": null,
+    "descripcion": "Una pieza de madera con borde perimetral y composición a rayas. Consulta sus opciones para servir y presentar.",
+    "imagen": "public/img/products/tablas-picar/bandeja/web/portada.webp",
+    "linea": "tablas",
+    "galeria": [],
+    "detalles": [
+      "Borde elevado alrededor de la superficie.",
+      "Consulta medidas y uso previsto."
+    ]
   }
 ]

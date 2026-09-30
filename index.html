@@ -1,229 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-
-  <title>CRJ Muebles Montessori</title>
-  <meta name="theme-color" content="#F29E5C">
-
-  <!-- Bootstrap (solo CSS) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Font Awesome para iconos de redes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="img/icon-192.png">
-  <link rel="apple-touch-icon" href="img/icon-192.png">
-</head>
-
-<body class="app-body">
-
-  <!-- HEADER con logo grande + texto -->
-  <header class="topbar topbar-logo-full">
-    <div class="header-hero-row">
-      <div class="logo-wrapper">
-        <img src="img/logo-crj.png" alt="CRJ Muebles Montessori" class="logo-big">
-      </div>
-
-      <div class="header-text">
-        <h1 class="header-title">CRJ Muebles</h1>
-        <p class="header-subtitle">
-          Taller especializado en muebles Montessori, piezas para grill y muebles a la medida en madera clara,
-          pensados para casas reales: departamentos, recámaras compartidas y salas que también son área de juego.
-        </p>
-
-        <ul class="header-badges">
-          <li>Hecho en CDMX</li>
-          <li>Madera sólida / calidad alta</li>
-          <li>Diseños a la altura de tu peques y de tu espacio</li>
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <main class="main-content">
-    <!-- HERO -->
-    <section class="hero hero-min">
-      <h1>Madera clara. Espacios simples.</h1>
-      <p>Muebles Montessori, piezas para grill y muebles a la medida listos para tu casa real.</p>
-      <a class="btn primary" href="tienda.html">Ver modelos</a>
-    </section>
-
-    <!-- DESTACADOS -->
-    <section class="home-section">
-      <div class="section-header">
-        <h2>Modelos destacados</h2>
-        <a href="tienda.html" class="link-small">Ver todos</a>
-      </div>
-      <div id="productos-destacados" class="grid cards-grid"></div>
-    </section>
-
-    <!-- TIRA CATÁLOGO DEMO -->
-    <section class="home-section demo-strip">
-      <h3>Catálogo demo</h3>
-      <p>
-        Incluye cama, estante, torre de aprendizaje, mesa, ropero y librero para que veas cómo luce lleno.
-      </p>
-
-      <div class="demo-actions">
-        <!-- Pon aquí tu PDF real -->
-        <a href="docs/catalogo-crj-muebles-montessori.pdf" class="btn secondary" download>
-          Descargar catálogo PDF
-        </a>
-
-        <a href="mailto:tu_correo@dominio.com?subject=Cat%C3%A1logo%20CRJ%20Muebles%20Montessori&body=Hola,%20me%20gustar%C3%ADa%20recibir%20el%20cat%C3%A1logo%20en%20PDF."
-           class="btn ghost">
-          Recibir por correo
-        </a>
-      </div>
-    </section>
-
-    <!-- LÍNEAS DE TRABAJO -->
-    <section class="home-section">
-      <div class="section-header">
-        <h2>Líneas de trabajo</h2>
-      </div>
-
-      <div class="grid cards-grid">
-        <article class="card">
-          <h4>Montessori</h4>
-          <p>
-            Camas suelo, torres de aprendizaje, libreros y estantes bajos
-            para fomentar independencia y orden desde pequeños.
-          </p>
-        </article>
-
-        <article class="card">
-          <h4>Grill & cocina</h4>
-          <p>
-            Mesas auxiliares, tablas de picar en maderas duras y box para carne caliente,
-            pensados para parrillas, cocinas y terrazas.
-          </p>
-        </article>
-
-        <article class="card">
-          <h4>Muebles a la medida</h4>
-          <p>
-            Diseñamos y fabricamos muebles a la medida para sala, estudio, taller u oficina,
-            aprovechando al máximo tu espacio.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- QUIÉN SOY / QUÉ OFREZCO -->
-    <section class="home-section about-section">
-      <div class="about-grid">
-        <div class="about-block">
-          <h3>Quién soy</h3>
-          <p>
-            Soy CRJ Muebles, un taller pequeño que diseña y fabrica muebles en madera clara:
-            Montessori, piezas para grill y muebles a la medida, pensados para espacios reales.
-          </p>
-        </div>
-
-        <div class="about-block">
-          <h3>Qué ofrezco</h3>
-          <ul>
-            <li>Muebles Montessori en madera sólida o de alta calidad, listos para uso diario.</li>
-            <li>Mesas auxiliares, tablas de picar y box para carne caliente para tu zona de grill.</li>
-            <li>Muebles a la medida según tu espacio y acompañamiento directo por WhatsApp.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- REDES SOCIALES -->
-    <section class="home-section social-section">
-      <h3>Conecta con nosotros</h3>
-      <p>Síguenos y escríbenos para cotizar tu mueble.</p>
-
-      <div class="social-links">
-        <!-- Cambia las URLs por las reales -->
-        <a href="https://www.facebook.com/" target="_blank" class="social-pill social-fb">
-          <i class="fa-brands fa-facebook-f"></i>
-          <span>CRJ muebles</span>
-        </a>
-
-        <a href="https://www.instagram.com/" target="_blank" class="social-pill social-ig">
-          <i class="fa-brands fa-instagram"></i>
-          <span>CRJ_muebles</span>
-        </a>
-
-        <a href="https://wa.me/525537027887" target="_blank" class="social-pill social-wa">
-          <i class="fa-brands fa-whatsapp"></i>
-          <span>WhatsApp 55 3702 7887</span>
-        </a>
-      </div>
-    </section>
-  </main>
-
-<!-- BOTTOM NAV TIPO APP -->
-<nav class="bottom-nav">
-  <a href="index.html" class="nav-item"><span>Inicio</span></a>
-
-  <a href="tienda.html" class="nav-item">
-    <span class="icon">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="9" cy="21" r="1"/>
-        <circle cx="20" cy="21" r="1"/>
-        <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
-      </svg>
-    </span>
-    <span>Tienda</span>
-  </a>
-
-  <a href="https://wa.me/525537027887?text=Hola,%20quiero%20informaci%C3%B3n%20de%20muebles%20Montessori" class="nav-item">
-    <span>💬 WhatsApp</span>
-  </a>
-</nav>
-
-
-  <script src="app.js"></script>
-  <!--
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function(){
-      navigator.serviceWorker.register("service-worker.js");
-    });
-  }
-</script>
--->
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const nav = document.querySelector(".bottom-nav");
-    if (!nav) return;
-
-    // Página actual (ej: "index.html" o "tienda.html")
-    let current = window.location.pathname.split("/").pop() || "index.html";
-
-    // Quita activo previo (por si quedó en el HTML)
-    nav.querySelectorAll(".nav-item-active").forEach(a => a.classList.remove("nav-item-active"));
-
-    // Marca como activo el link que coincide (solo links internos .html)
-    const links = nav.querySelectorAll('a.nav-item[href]');
-    for (const a of links) {
-      const href = a.getAttribute("href") || "";
-      if (!href.endsWith(".html")) continue; // ignora WhatsApp u otros externos
-
-      const file = href.split("/").pop();
-      if (file === current) {
-        a.classList.add("nav-item-active");
-        break;
-      }
-    }
-  });
-</script>
-
-</body>
-
-</html>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRJ Muebles | Muebles y piezas de madera</title><meta name="description" content="Tablas para cocina y grill, muebles a la medida y mobiliario Montessori. Conoce las piezas de CRJ Muebles, un taller en CDMX.">
+<meta name="theme-color" content="#f8f6f1"><meta property="og:type" content="website"><meta property="og:locale" content="es_MX"><meta property="og:site_name" content="CRJ Muebles"><meta property="og:title" content="CRJ Muebles | Muebles y piezas de madera"><meta property="og:description" content="Tablas para cocina y grill, muebles a la medida y mobiliario Montessori. Conoce las piezas de CRJ Muebles, un taller en CDMX.">
+<link rel="stylesheet" href="styles.css"><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="public/img/marca/icon-192.png"><link rel="apple-touch-icon" href="public/img/marca/icon-192.png"><script src="install.js" defer></script><script src="app.js" defer></script>
+</head><body data-page="home">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="CRJ Muebles, inicio"><img class="brand-logo" src="public/img/marca/logo-crj.png" alt="" width="72" height="80"><span class="brand-name">Muebles<span class="brand-subtitle">Madera · Diseño · Taller</span></span></a>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false">Menú <span aria-hidden="true">☰</span></button>
+<nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+<a href="index.html" data-nav="inicio">Inicio</a><a href="tienda.html?categoria=tablas" data-nav="tablas">Tablas</a><a href="tienda.html?categoria=muebles" data-nav="muebles">Muebles</a><a href="tienda.html?categoria=montessori" data-nav="montessori">Montessori</a><a href="tienda.html" data-nav="catalogo">Catálogo</a><button class="nav-install" type="button" data-install>Instalar app</button><a class="nav-contact" href="https://wa.me/525537027887" data-project-contact>Cotizar ↗</a>
+</nav></div></header>
+<div class="notice" id="offline-notice" role="status" hidden>Estás sin conexión. Puedes explorar las piezas guardadas; para consultar por WhatsApp necesitarás conectarte.</div>
+<div class="notice" id="update-notice" role="status" hidden>Hay una nueva versión disponible.<button type="button" id="update-button">Actualizar</button></div>
+<noscript><p>Activa JavaScript para explorar los productos. También puedes <a href="https://wa.me/525537027887">consultarnos por WhatsApp</a>.</p></noscript>
+<main class="container" id="contenido" tabindex="-1">
+<section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow">Taller de madera · Ciudad de México</p><h1 id="hero-title">Madera, diseño<br>y <em>vida cotidiana.</em></h1><p class="hero-description">Piezas para tu cocina. Muebles para tu espacio.<br>Diseñamos y fabricamos en madera para acompañar tu día a día.</p><div class="actions"><a class="button button-primary" href="tienda.html">Explorar piezas <span aria-hidden="true">&nbsp; ↗</span></a><a class="text-link" href="#proyectos">Un proyecto a tu medida →</a></div><p class="hero-note">Cocina & grill &nbsp; / &nbsp; Muebles &nbsp; / &nbsp; Montessori</p></div>
+<figure class="hero-figure"><img class="hero-image" src="public/img/products/tablas-picar/rayas/web/portada.webp" alt="Tabla de madera a rayas con un cuchillo, fotografiada sobre fondo claro" width="1400" height="1050" fetchpriority="high"><figcaption><span>Madera en la cocina.</span><span>CRJ Muebles — Cocina & grill</span></figcaption></figure></section>
+<section class="categories" aria-labelledby="lines-title"><div class="section-heading"><div><p class="eyebrow">Explora nuestras líneas</p><h2 id="lines-title">Una pieza para cada espacio.</h2></div></div><div class="category-grid">
+<a class="category-card" href="tienda.html?categoria=tablas"><img class="category-image" src="public/img/products/tablas-picar/con-mango/web/portada.webp" alt="Tabla de madera con mango" width="800" height="600" loading="lazy"><span class="category-number">01</span><div><h3>Tablas de picar</h3><p>Piezas para preparar, servir y compartir. Cocina y grill.</p></div><span class="category-arrow" aria-hidden="true">↗</span></a>
+<a class="category-card" href="tienda.html?categoria=muebles"><img class="category-image" src="public/img/products/muebles/organizador-con-cajon/web/portada.webp" alt="Organizador de madera con cajón" width="800" height="600" loading="lazy"><span class="category-number">02</span><div><h3>Muebles</h3><p>Organizadores, piezas para el hogar y proyectos a la medida.</p></div><span class="category-arrow" aria-hidden="true">↗</span></a>
+<a class="category-card" href="tienda.html?categoria=montessori"><img class="category-image" src="public/img/products/montessori/cama-piso/mnt-cama-001/01-cover.webp" alt="Cama suelo Montessori" width="800" height="600" loading="lazy"><span class="category-number">03</span><div><h3>Montessori</h3><p>Mobiliario para acompañar autonomía y aprendizaje.</p></div><span class="category-arrow" aria-hidden="true">↗</span></a></div></section>
+<section class="section" aria-labelledby="featured-title"><div class="section-heading"><div><p class="eyebrow">Una selección del taller</p><h2 id="featured-title">Piezas para conocer.</h2></div><a class="text-link" href="tienda.html">Ver todo el catálogo ↗</a></div><div class="product-grid featured-grid" id="productos-destacados" aria-busy="true"><p class="loading-state">Cargando piezas…</p></div></section>
+<section class="workshop workshop-photo" aria-labelledby="workshop-title"><figure><img src="public/img/products/muebles/especiero-bandejas/web/portada.webp" alt="Especiero de tres bandejas fotografiado en el taller" width="1400" height="1050" loading="lazy"><figcaption>Una pieza en el taller: forma, estructura y detalle.</figcaption></figure><div><p class="eyebrow">Hecho en taller · CDMX</p><h2 id="workshop-title">La madera toma forma.</h2><p>Somos CRJ Muebles. Diseñamos y fabricamos piezas para la cocina, muebles y proyectos personalizados. Aquí puedes ver las piezas, acercarte a sus detalles y conversar directamente con el taller.</p><a class="text-link" href="producto.html?id=12">Conocer el especiero →</a></div></section>
+<section class="section project-section" id="proyectos" aria-labelledby="project-title"><div><p class="eyebrow">Muebles & proyectos a la medida</p><h2 id="project-title">¿Tienes una<br>idea diferente?</h2><p>Un rincón por aprovechar, un mueble que imaginas o una pieza especial. Cuéntanos qué necesitas y conversemos sobre tu proyecto.</p></div><div class="project-action"><a class="button button-primary" href="https://wa.me/525537027887" data-project-contact>Cotizar proyecto ↗</a><p class="small muted">La conversación empieza por WhatsApp.</p></div></section>
+<section class="project-guide" aria-labelledby="guide-title"><div><p class="eyebrow">De tu idea a la conversación</p><h2 id="guide-title">Empecemos por lo que necesitas.</h2></div><div class="faq-list"><details><summary>¿Qué envío para cotizar un mueble?</summary><p>Cuéntanos para qué lo usarás, las medidas del espacio y la pieza que te interesa. Puedes compartir una fotografía o una referencia por WhatsApp.</p></details><details><summary>¿Puedo consultar otras medidas o acabados?</summary><p>Sí. Envíanos tu idea para revisar las opciones del proyecto. Materiales, medidas y acabado se confirman al cotizar.</p></details><details><summary>¿Cómo confirmo precio, disponibilidad y entrega?</summary><p>Desde la ficha pulsa Consultar por WhatsApp. El mensaje lleva la pieza y su enlace para que podamos conversar sobre sus detalles. Las piezas sin precio publicado se cotizan por ese medio.</p></details></div></section><div class="catalog-invitation"><p>Encuentra tu próxima pieza.</p><a class="text-link" href="tienda.html">Explorar el catálogo ↗</a></div>
+<section class="install-band" aria-labelledby="install-band-title"><img src="public/img/marca/icon-192.png" width="64" height="64" alt="" loading="lazy"><div><p class="eyebrow">CRJ en tu dispositivo</p><h2 id="install-band-title">El taller, siempre a mano.</h2><p>Instala la app para volver al catálogo y consultar las piezas que ya has visitado, incluso sin conexión.</p></div><button class="button button-secondary" type="button" data-install>Instalar app</button></section>
+<dialog id="install-dialog" class="install-dialog" aria-labelledby="install-title"><form method="dialog" class="dialog-close"><button class="button button-secondary" aria-label="Cerrar instrucciones de instalación">Cerrar ×</button></form><img class="install-icon" src="public/img/marca/icon-192.png" width="72" height="72" alt="Logo CRJ Muebles"><p class="eyebrow">Tu catálogo de madera</p><h2 id="install-title">Instalar CRJ Muebles</h2><p id="install-message" role="status"></p><button class="button button-primary" id="native-install" type="button" hidden>Instalar en este dispositivo</button><div class="install-instructions"><h3>Desde tu navegador</h3><p><strong>Chrome o Edge:</strong> busca la opción de instalar esta página como aplicación en el menú o en la barra de direcciones.</p><p><strong>iPhone o iPad:</strong> abre la página en Safari, entra en Compartir y selecciona Añadir a pantalla de inicio.</p><p>Si esta vista no ofrece instalación, abre la dirección en un navegador compatible.</p></div><label for="install-url">Dirección del sitio</label><div class="copy-row"><input id="install-url" type="url" readonly><button id="copy-install-url" class="button button-secondary" type="button">Copiar</button></div><p id="copy-status" class="small" role="status"></p><p class="small muted" id="local-install-note" hidden>Esta dirección local funciona solo en este equipo. Para instalar en un teléfono, utiliza la dirección pública del sitio.</p></dialog>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-top"><a class="brand" href="index.html" aria-label="CRJ Muebles, inicio"><img class="brand-logo" src="public/img/marca/logo-crj.png" alt="" width="72" height="80"><span class="brand-name">Muebles<span class="brand-subtitle">Madera · Diseño · Taller</span></span></a><nav aria-label="Enlaces del pie de página"><a href="tienda.html">Catálogo</a><a href="index.html#proyectos">Proyectos a la medida</a><a href="https://wa.me/525537027887">WhatsApp · 55 3702 7887 ↗</a></nav></div><div class="footer-bottom"><p>© <span data-year>2026</span> CRJ Muebles</p><p>Diseño y fabricación en CDMX.</p><p id="pwa-status" role="status"></p></div></div></footer>
+</body></html>

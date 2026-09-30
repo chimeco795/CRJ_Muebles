@@ -1,0 +1,596 @@
+[
+  {
+    "indice": 0,
+    "origen": "public/img/products/20260206_184146.jpg",
+    "destino": "public/img/products/tablas-picar/con-mango/originales/tabla-con-mango.jpg",
+    "sha256": "5063d72c7fc7e10f809fa4b25a4b64f5886e26b5cbc126aece37e2e3b9de6391"
+  },
+  {
+    "indice": 1,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.56 AM (1).jpeg",
+    "destino": "public/img/promociones/archivo/cama-mascota-1.jpeg",
+    "sha256": "65c2f916d401c91f4d5383a2b1357a760ec7fbd18df40401a210ee79f538a539"
+  },
+  {
+    "indice": 2,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.56 AM (2).jpeg",
+    "destino": "public/img/products/muebles/cama-mascota/originales/vista-02.jpeg",
+    "sha256": "cb70203e6fdb14658b1484fd5f54b4a4ba8757d9dcd8f381d73be01251cbe3ea"
+  },
+  {
+    "indice": 3,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.56 AM.jpeg",
+    "destino": "public/img/promociones/archivo/cama-mascota-3.jpeg",
+    "sha256": "9c46ba5dd676bbbb0bfe51658b79c8ed872d0395cb3734f8e5fbb45867bb837f"
+  },
+  {
+    "indice": 4,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.58 AM (1).jpeg",
+    "destino": "public/img/products/muebles/cama-mascota/originales/vista-04.jpeg",
+    "sha256": "1ef614a20dd799b0fea4b05e65f09a301441832cd718f02af4b332056919ce55"
+  },
+  {
+    "indice": 5,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.58 AM (2).jpeg",
+    "destino": "public/img/products/muebles/cama-mascota/originales/vista-05.jpeg",
+    "sha256": "a4808e5c580c24372ada9d011152d8356124e3e65198577197bc8104b0c6cabb"
+  },
+  {
+    "indice": 6,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.58 AM.jpeg",
+    "destino": "public/img/products/muebles/cama-mascota/originales/vista-06.jpeg",
+    "sha256": "4a1b95efdc0b8977b9a0fb2c30a95eac046e2b7ac5a87c3a269a0f18ab0c7bc0"
+  },
+  {
+    "indice": 7,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.59 AM (1).jpeg",
+    "destino": "public/img/products/muebles/cama-mascota/originales/vista-07.jpeg",
+    "sha256": "1390afd5c181cf199e4dd16162608a227b822ca69ba43ae70ab9c0bd3187a291"
+  },
+  {
+    "indice": 8,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.59 AM (2).jpeg",
+    "destino": "public/img/products/muebles/cama-mascota/originales/vista-08.jpeg",
+    "sha256": "018437aed94b768d460a999d381105297f13a102e1afcba5cdc06875655a2dec"
+  },
+  {
+    "indice": 9,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.59 AM (3).jpeg",
+    "destino": "public/img/products/muebles/cama-mascota/originales/vista-09.jpeg",
+    "sha256": "0567ce1da643412e413da6058047038ed42738458ce9702e382c5789552e6d30"
+  },
+  {
+    "indice": 10,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.59 AM (4).jpeg",
+    "destino": "public/img/products/muebles/cama-mascota/originales/vista-10.jpeg",
+    "sha256": "5387ff770607170e0fc7b1119a133ef73a9969d9d44c194d9a47fcf53a105d5a"
+  },
+  {
+    "indice": 11,
+    "origen": "public/img/products/Cama perro madera/WhatsApp Image 2026-05-03 at 11.28.59 AM.jpeg",
+    "destino": "public/img/products/muebles/cama-mascota/originales/vista-11.jpeg",
+    "sha256": "80838f7bb000e4aea25fcf96cf551976ccdbdeeb41e28403b67828af22a9b7bc"
+  },
+  {
+    "indice": 12,
+    "origen": "public/img/products/Catalogo de maderas/Bocote_machiche_chechen.png",
+    "destino": "public/img/referencias/maderas/bocote-machiche-chechen.png",
+    "sha256": "27158456e163d2fbfeaf0cd2b4c4bae21e6630884e698401cded9bb961017948"
+  },
+  {
+    "indice": 13,
+    "origen": "public/img/products/Catalogo de maderas/CedroBlanco_Oyamel_Encino.png",
+    "destino": "public/img/referencias/maderas/cedroblanco-oyamel-encino.png",
+    "sha256": "ee316a109305e543dc2ea014c9d3b4e718be7fa6b1508f30d391f1f6d27aa04f"
+  },
+  {
+    "indice": 14,
+    "origen": "public/img/products/Catalogo de maderas/Cumarú_Ipé,_Wengué.png",
+    "destino": "public/img/referencias/maderas/cumaru-ipe-wengue.png",
+    "sha256": "4e1cce5cf68cba5a783ab301b8b0063a6746b62f871f0ff03fff1ae615e9614f"
+  },
+  {
+    "indice": 15,
+    "origen": "public/img/products/Catalogo de maderas/Nogal_fresno_maple.png",
+    "destino": "public/img/referencias/maderas/nogal-fresno-maple.png",
+    "sha256": "94faff716a8f39ea66443e9de1b636bca67a4f029be0308979220d8c1a72c280"
+  },
+  {
+    "indice": 16,
+    "origen": "public/img/products/Catalogo de maderas/Pino_Cedro_Parota.png",
+    "destino": "public/img/referencias/maderas/pino-cedro-parota.png",
+    "sha256": "0725d10723fab7e6fc7135d631df26dcf3b521712823d6050c61316386f3522b"
+  },
+  {
+    "indice": 17,
+    "origen": "public/img/products/Catalogo de maderas/robleAmericano_robleRojo_primavera.png",
+    "destino": "public/img/referencias/maderas/robleamericano-roblerojo-primavera.png",
+    "sha256": "8dc4f30d2056b4445985b3642f3b3ded7abd458535590b6b9395eb09ad6bb94e"
+  },
+  {
+    "indice": 18,
+    "origen": "public/img/products/Catalogo de maderas/RosaMorada_Huanacaxtle_Caoba.png",
+    "destino": "public/img/referencias/maderas/rosamorada-huanacaxtle-caoba.png",
+    "sha256": "c39a87a0af33ed68a4e628910e63745664e00d92a365386b0f3d1971734d2b29"
+  },
+  {
+    "indice": 19,
+    "origen": "public/img/products/Catalogo de maderas/Sapelli_siricote_granadillo.png",
+    "destino": "public/img/referencias/maderas/sapelli-siricote-granadillo.png",
+    "sha256": "e930126fc7d0bc2e00a191b1378f76efc99cd4c516814b9e22d4ed80605508d9"
+  },
+  {
+    "indice": 20,
+    "origen": "public/img/products/Catalogo de maderas/Tzalam_banak_teca.png",
+    "destino": "public/img/referencias/maderas/tzalam-banak-teca.png",
+    "sha256": "95172e88acb8a74cd0d534c9587c9fd9d4fba1d3bfe13a8dc068dfb783cb9520"
+  },
+  {
+    "indice": 21,
+    "origen": "public/img/products/Catalogo de maderas/Zebrawood_Purpleheart_Bubinga.png",
+    "destino": "public/img/referencias/maderas/zebrawood-purpleheart-bubinga.png",
+    "sha256": "55976aacd3c1b99a75b8b9eb74a00bdde8d5c1cd2091c73689ba4ec5d8490f75"
+  },
+  {
+    "indice": 22,
+    "origen": "public/img/products/Catalogo de maderas/Ébano_Olivo.png",
+    "destino": "public/img/referencias/maderas/ebano-olivo.png",
+    "sha256": "bd3f36ffd1ea0edf78e946a8ff510042d5de67860ba46865b5f79934cebc8555"
+  },
+  {
+    "indice": 23,
+    "origen": "public/img/products/ChatGPT Image 11 jun 2026, 02_04_25 p.m..png",
+    "destino": "public/img/referencias/planos/mesa-servicio/plano-23.png",
+    "sha256": "17d5f59fc5d10ed872984487fb6757b96c280db56cf1f91ae94dff5be22a4594"
+  },
+  {
+    "indice": 24,
+    "origen": "public/img/products/ChatGPT Image 12 may 2026, 03_42_11 p.m..png",
+    "destino": "public/img/referencias/guias/cuidados-tablas.png",
+    "sha256": "66cf21e75fce6762a6e39ddb628eeac84b7f777afeaa81a93351f4e7a0877dd9"
+  },
+  {
+    "indice": 25,
+    "origen": "public/img/products/ChatGPT Image 15 jun 2026, 04_32_57 p.m..png",
+    "destino": "public/img/referencias/planos/mesa-servicio/plano-25.png",
+    "sha256": "c7ff2d6d943d28ce5a5cdd523bf64639a30db87728cd393123d74aeb3724c0a0"
+  },
+  {
+    "indice": 26,
+    "origen": "public/img/products/ChatGPT Image 24 jun 2026, 12_47_59 p.m..png",
+    "destino": "public/img/referencias/planos/especiero/plano-26.png",
+    "sha256": "18ba69d8ba92b8c7371c24c7ddb691ed069c432d2508b34aae76e9d8a22d68be"
+  },
+  {
+    "indice": 27,
+    "origen": "public/img/products/ChatGPT Image 24 jun 2026, 12_48_16 p.m..png",
+    "destino": "public/img/referencias/planos/especiero/plano-27.png",
+    "sha256": "e061b3bacc863e3062b28627442331b78a2662cca811de8eb574830e63e56b9b"
+  },
+  {
+    "indice": 28,
+    "origen": "public/img/products/ChatGPT Image 24 jun 2026, 12_56_59 p.m..png",
+    "destino": "public/img/referencias/planos/especiero/plano-28.png",
+    "sha256": "44712f27bfc2b512913e2d12954ceae72c3e5e449f46eea7e75a3b2fdf10cfd2"
+  },
+  {
+    "indice": 29,
+    "origen": "public/img/products/ChatGPT Image 29 jun 2026, 11_18_07 a.m..png",
+    "destino": "public/img/referencias/planos/banca/plano-29.png",
+    "sha256": "12b912e7e5277df2b1413ad870d9b1fe821d3cab19af79418117f9a60911dc4b"
+  },
+  {
+    "indice": 30,
+    "origen": "public/img/products/ChatGPT Image 29 jun 2026, 11_23_03 a.m..png",
+    "destino": "public/img/referencias/planos/banca/plano-30.png",
+    "sha256": "7124e4171035e4b7ac59e964750b04aede6c4d98cb5884b4ae239078fc752307"
+  },
+  {
+    "indice": 31,
+    "origen": "public/img/products/ChatGPT Image 31 jul 2026, 11_13_52 a.m..png",
+    "destino": "public/img/referencias/planos/especiero/plano-31.png",
+    "sha256": "e061b3bacc863e3062b28627442331b78a2662cca811de8eb574830e63e56b9b"
+  },
+  {
+    "indice": 32,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.35 PM (1).jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-32.jpeg",
+    "sha256": "ce4be168d5a51eca669a9f7badcae0f3b2ab066edf64d8a8279f0f947883f9d6"
+  },
+  {
+    "indice": 33,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.35 PM (2).jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-33.jpeg",
+    "sha256": "aaf15e4d7c4c8a4ef4e71ec5dda9c82c9588efa2620308f9afca20a731ddae48"
+  },
+  {
+    "indice": 34,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.35 PM (3).jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-34.jpeg",
+    "sha256": "9bcff583573c027899944bb95cf910489564c417bfe27b925cd0b466e972e49e"
+  },
+  {
+    "indice": 35,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.35 PM.jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-35.jpeg",
+    "sha256": "b1d5a9ba37e5929789ee02b266cf5d880bd73f540879dfdf0acd8b9aff069ff5"
+  },
+  {
+    "indice": 36,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.36 PM (1).jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-36.jpeg",
+    "sha256": "4e3f53274934963a36422405d439b9fc5fe262a8143c0621e6bbffe716d6bbc7"
+  },
+  {
+    "indice": 37,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.36 PM (2).jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-37.jpeg",
+    "sha256": "d384bcf62da91ea8a43c2c58d2f78d3a31b485ddcd136cc840b6e13416f61ca5"
+  },
+  {
+    "indice": 38,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.36 PM (3).jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-38.jpeg",
+    "sha256": "7d6477ea5c1dca1295621a09f80789e333ffd819d2769502bb1605f8f020e0fc"
+  },
+  {
+    "indice": 39,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.36 PM (4).jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-39.jpeg",
+    "sha256": "3a0d9104adbb8a95c27fb968c80665a051ff68e16f154d29b8086c8a55e53be3"
+  },
+  {
+    "indice": 40,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.36 PM.jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-40.jpeg",
+    "sha256": "5fc9942ef6d88bb6cc89e204728b525b8f5427958c36edc40addac97ff1e8e6d"
+  },
+  {
+    "indice": 41,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.37 PM (1).jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-41.jpeg",
+    "sha256": "f48eda81ba95d92977153a7de05a50ee181f0b04b58a2d871399e83cd6186e7d"
+  },
+  {
+    "indice": 42,
+    "origen": "public/img/products/Cortas/WhatsApp Image 2025-12-15 at 12.37.37 PM.jpeg",
+    "destino": "public/img/products/tablas-picar/rayas/originales/vista-42.jpeg",
+    "sha256": "cc21318bdcd7ff06c2a38ead21f1255c7b457c9b9daa8054e01227d2a3a5368d"
+  },
+  {
+    "indice": 43,
+    "origen": "public/img/products/especiero/6e75e372-ed33-4d5a-b859-c28b74406d03.png",
+    "destino": "public/img/promociones/archivo/organizador-bandejas-43.png",
+    "sha256": "78da60bfca1ff051f1aebcc4518a852ce3a5fa9172ea33665fd6d81e954aca9d"
+  },
+  {
+    "indice": 44,
+    "origen": "public/img/products/especiero/8b0a3d98-2ad5-46fd-b9a9-4d55176b793c.jpg",
+    "destino": "public/img/promociones/archivo/organizador-bandejas-44.jpg",
+    "sha256": "156d99754a98815eda7245d169bf1709cd7fe0a7b6dc31806074b52e9d665b1e"
+  },
+  {
+    "indice": 45,
+    "origen": "public/img/products/especiero/c403ad05-bd1b-4361-b13d-2c853af7c176.jpg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/ambientes/composicion-45.jpg",
+    "sha256": "78169c80c5dd40e62a36248ce465185604856f8e0121465310c712936a6d7c9e"
+  },
+  {
+    "indice": 46,
+    "origen": "public/img/products/especiero/image-1788314526694.jpg",
+    "destino": "public/img/products/muebles/especiero-bandejas/originales/taller-46.jpg",
+    "sha256": "2b1a79f2686a3e255ee99a42f4351ad92676b06e6db68d490b483d2548e5dca2"
+  },
+  {
+    "indice": 47,
+    "origen": "public/img/products/especiero/image-1788314538144 - copia.jpg",
+    "destino": "public/img/products/muebles/especiero-bandejas/originales/taller-47.jpg",
+    "sha256": "79490c69d4c65079604c56694a5ceae40b60026e39f97b844b8262bdcfde63ef"
+  },
+  {
+    "indice": 48,
+    "origen": "public/img/products/especiero/image-1788314538144.jpg",
+    "destino": "public/img/products/muebles/especiero-bandejas/originales/taller-48.jpg",
+    "sha256": "79490c69d4c65079604c56694a5ceae40b60026e39f97b844b8262bdcfde63ef"
+  },
+  {
+    "indice": 49,
+    "origen": "public/img/products/especiero/image-1788314548568.jpg",
+    "destino": "public/img/products/muebles/especiero-bandejas/originales/taller-49.jpg",
+    "sha256": "777a8309027e1e1008dcf10c588c7b41fbbed198b17853f4d52b39d845cc49bb"
+  },
+  {
+    "indice": 50,
+    "origen": "public/img/products/especiero/image-1788314630850.jpg",
+    "destino": "public/img/products/muebles/especiero-bandejas/originales/taller-50.jpg",
+    "sha256": "7ca80d30c61cda025fe107c29a604a7fb880f4456cc058cba4c697cc934b1d66"
+  },
+  {
+    "indice": 51,
+    "origen": "public/img/products/file_00000000156c722f9e38510db27c5df3.png",
+    "destino": "public/img/products/tablas-picar/con-mango/referencias/medidas.png",
+    "sha256": "fe36b88d3595df7f41617d880849203086b39c166887c826f091c6b426cb05ea"
+  },
+  {
+    "indice": 52,
+    "origen": "public/img/products/insertos/90454.jpg",
+    "destino": "public/img/products/muebles/mesa-insertos/originales/vista-52.jpg",
+    "sha256": "05f000607031c363f61b2bafbcbb8ea1eeb4f3cf4534c93c75145cd494f6bef1"
+  },
+  {
+    "indice": 53,
+    "origen": "public/img/products/insertos/90455.jpg",
+    "destino": "public/img/products/muebles/mesa-insertos/originales/vista-53.jpg",
+    "sha256": "5c1f15ee11cbc4d0d9842ad09280c5150bf803159c7bba2cef97f35306ca0cc2"
+  },
+  {
+    "indice": 54,
+    "origen": "public/img/products/insertos/90456.jpg",
+    "destino": "public/img/products/muebles/mesa-insertos/originales/vista-54.jpg",
+    "sha256": "7e49b644bbabfc74cfea8dcff896e99dee64db07f2696e45f62873ac577cbaa6"
+  },
+  {
+    "indice": 55,
+    "origen": "public/img/products/insertos/90457.jpg",
+    "destino": "public/img/products/muebles/mesa-insertos/originales/vista-55.jpg",
+    "sha256": "ce35c055b327e5d86a72e7822228711ea51161fa75f7ad4d09106d75044c3b3f"
+  },
+  {
+    "indice": 56,
+    "origen": "public/img/products/insertos/90458.jpg",
+    "destino": "public/img/products/muebles/mesa-insertos/originales/vista-56.jpg",
+    "sha256": "5c745dd08031a45bf3bc7841c4fe9062a37eda339abed5322d118469e9318f4c"
+  },
+  {
+    "indice": 57,
+    "origen": "public/img/products/insertos/90459.jpg",
+    "destino": "public/img/products/muebles/mesa-insertos/originales/vista-57.jpg",
+    "sha256": "967ca9a3adc5396ca9bc9e261d84530aaf93245ca1351b09a248e236cd6240c3"
+  },
+  {
+    "indice": 58,
+    "origen": "public/img/products/logo_JPG.jpg",
+    "destino": "public/img/marca/originales/logo-fondo-blanco.jpg",
+    "sha256": "0aa098936619d0906db7edb07cf0cd6b9195eed0d2eb8ab79076da77718c9f60"
+  },
+  {
+    "indice": 59,
+    "origen": "public/img/products/logo_PNG-removebg-preview.png",
+    "destino": "public/img/marca/originales/logo-transparente.png",
+    "sha256": "1c638b77a97ba9ab90fc604e65a425e73771b401824060988ca1b4033aac319d"
+  },
+  {
+    "indice": 60,
+    "origen": "public/img/products/logo_PNG.png",
+    "destino": "public/img/marca/originales/logo.png",
+    "sha256": "13c4a24741b1c353612d18a167ba792526490d512231909dc45ab7c14188a108"
+  },
+  {
+    "indice": 61,
+    "origen": "public/img/products/MesaAux/Imagen1.png",
+    "destino": "public/img/referencias/proyectos/carrito-servicio/modelo-3d.png",
+    "sha256": "51b31fd18ca0305929b90392b74f2d638f98ff44622c01d490ccf2998115a674"
+  },
+  {
+    "indice": 62,
+    "origen": "public/img/products/montessori/cama-piso/mnt-cama-001/01-cover.webp",
+    "destino": "public/img/products/montessori/cama-piso/mnt-cama-001/01-cover.webp",
+    "sha256": "596e838a27d0bc7239e82ffd8e601f554ae6ddd64d4eaa1cc3e991c5179c5a32"
+  },
+  {
+    "indice": 63,
+    "origen": "public/img/products/Nueva carpeta/46486.jpg",
+    "destino": "public/img/referencias/terceros/base-regalo.jpg",
+    "sha256": "65dc6647923c2af0c24ef11a370e6f06b950374db5a2d7f6c1993c942e13f7eb"
+  },
+  {
+    "indice": 64,
+    "origen": "public/img/products/Nueva carpeta/53b7ad79-1dce-416b-835f-f68b1accbd61.png",
+    "destino": "public/img/referencias/terceros/plano-base-botellas.png",
+    "sha256": "51c27d81b85d9e6e25b4ae8ae8bcacee67cb63d50cf15a23daf3c83e434592fa"
+  },
+  {
+    "indice": 65,
+    "origen": "public/img/products/Nueva carpeta/5ef143dc-24db-493e-8b9a-e043a4e2ba3e.png",
+    "destino": "public/img/referencias/terceros/plano-base-doble.png",
+    "sha256": "e4c028a6da47f42a211cf3ab0eca01e2a4e566308f52f6a794a635523ba7f634"
+  },
+  {
+    "indice": 66,
+    "origen": "public/img/products/Nueva carpeta/77c8d2db-f38d-4c97-ab77-fa247d1b68f6.png",
+    "destino": "public/img/referencias/terceros/plano-cama-mascota.png",
+    "sha256": "1a7ae61344c4d34998ddd155b755bfed3b54717d6226af5175cd91f9123b5f49"
+  },
+  {
+    "indice": 67,
+    "origen": "public/img/products/Nueva carpeta/a322591d-5e3a-44f2-9576-f329a858fd14.png",
+    "destino": "public/img/referencias/terceros/plano-base-regalo.png",
+    "sha256": "c2525472d8cd2e68cb1276d13695976ab66d84092eb1cd75d57771694510ceac"
+  },
+  {
+    "indice": 68,
+    "origen": "public/img/products/Nueva carpeta/e00bb016-a4e1-4f87-b124-4b75c206b82e.png",
+    "destino": "public/img/referencias/terceros/plano-banco.png",
+    "sha256": "e08c76235651b8827da38eaa6172fb44d7075164e9d44485e99d721fb8edaef5"
+  },
+  {
+    "indice": 69,
+    "origen": "public/img/products/Nueva carpeta/image.png",
+    "destino": "public/img/referencias/terceros/banco.png",
+    "sha256": "e0571ec9bc14de07cb375bcdf377727cf0d4b7a4e1d79fd8f8adc78bf6e47bb1"
+  },
+  {
+    "indice": 70,
+    "origen": "public/img/products/Nueva carpeta/Nicho pet.jpeg",
+    "destino": "public/img/referencias/terceros/anuncio-nicho-mascota.jpeg",
+    "sha256": "ff22867a2c2099803f4ca22343a9bc152bf83c52bb6e2d8c4bf290ea65007658"
+  },
+  {
+    "indice": 71,
+    "origen": "public/img/products/Nueva carpeta/Screenshot_20260416_072235_Facebook.jpg",
+    "destino": "public/img/referencias/terceros/captura-base-regalo.jpg",
+    "sha256": "50f1b10d2dc2aa85a893a2559be6b85c1a557dd12b07dcdbb814df9418e7bc93"
+  },
+  {
+    "indice": 72,
+    "origen": "public/img/products/organizador/Gemini_Generated_Image_efeyhmefeyhmefey.jpg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/ambientes/presentacion-72.jpg",
+    "sha256": "2248adfc0583f5a7eb120732cfbb6bd2e1cd88b10864437d410e2b4f85f4fd03"
+  },
+  {
+    "indice": 73,
+    "origen": "public/img/products/organizador/Gemini_Generated_Image_q1atzaq1atzaq1at.jpg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/ambientes/presentacion-73.jpg",
+    "sha256": "df593420eca7006a1ff799c453ddc39c324ada7fa4caba476b31a3cd50661ae0"
+  },
+  {
+    "indice": 74,
+    "origen": "public/img/products/organizador/Sin datos.jpeg",
+    "destino": "public/img/promociones/archivo/organizador-cajon-74.jpeg",
+    "sha256": "88b361048578e664043a85bb5fbb96103d1af87262e441d0f1e289a7c0612b38"
+  },
+  {
+    "indice": 75,
+    "origen": "public/img/products/organizador/WhatsApp Image 2026-09-07 at 10.21.10 AM (1).jpeg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/originales/vista-75.jpeg",
+    "sha256": "433716e1d89caccac14056de7221b37eae13e9342741d07ee401febc8c29cf50"
+  },
+  {
+    "indice": 76,
+    "origen": "public/img/products/organizador/WhatsApp Image 2026-09-07 at 10.21.10 AM (2).jpeg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/originales/vista-76.jpeg",
+    "sha256": "37015289da1ca223f5067186aa5cc606895f65000596e90641e3a9ecefbd8e24"
+  },
+  {
+    "indice": 77,
+    "origen": "public/img/products/organizador/WhatsApp Image 2026-09-07 at 10.21.10 AM (3).jpeg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/originales/vista-77.jpeg",
+    "sha256": "435f0ca05df2dffba9cb8a61dbc06115d84d8673531be0658598a57dce33de76"
+  },
+  {
+    "indice": 78,
+    "origen": "public/img/products/organizador/WhatsApp Image 2026-09-07 at 10.21.10 AM (4).jpeg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/originales/vista-78.jpeg",
+    "sha256": "ce3bf8a7ff705769b266aee0b08b0b7a49b2717f7b6c469a6b9635678a316858"
+  },
+  {
+    "indice": 79,
+    "origen": "public/img/products/organizador/WhatsApp Image 2026-09-07 at 10.21.10 AM (5).jpeg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/originales/vista-79.jpeg",
+    "sha256": "6babf0f774c3e15456593cd4922cafdc775a1a72d664e3020f1c8197819cf929"
+  },
+  {
+    "indice": 80,
+    "origen": "public/img/products/organizador/WhatsApp Image 2026-09-07 at 10.21.10 AM (6).jpeg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/originales/vista-80.jpeg",
+    "sha256": "9893e020c94386829c13be82b036fa7eba77cca357abc68932e99c6acc347aef"
+  },
+  {
+    "indice": 81,
+    "origen": "public/img/products/organizador/WhatsApp Image 2026-09-07 at 10.21.10 AM (7).jpeg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/originales/vista-81.jpeg",
+    "sha256": "9e229c5d225edf4112a7907a44a2db586ad4ceb6200d0239fc77cfa362bbbd7a"
+  },
+  {
+    "indice": 82,
+    "origen": "public/img/products/organizador/WhatsApp Image 2026-09-07 at 10.21.10 AM (8).jpeg",
+    "destino": "public/img/promociones/archivo/organizador-cajon-82.jpeg",
+    "sha256": "b39c4eedb79146e47d79d94f492f3f936b11c438b4f8dd618e98d27d5ac3719e"
+  },
+  {
+    "indice": 83,
+    "origen": "public/img/products/organizador/WhatsApp Image 2026-09-07 at 10.21.10 AM.jpeg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/originales/vista-83.jpeg",
+    "sha256": "ac1e350d22cdcaf155e64f6a65af9bfc56795a3099ad0707893c01416e7b4f20"
+  },
+  {
+    "indice": 84,
+    "origen": "public/img/products/organizador/WhatsApp Image 2026-09-07 at 10.21.23 AM.jpeg",
+    "destino": "public/img/products/muebles/organizador-con-cajon/ambientes/composicion-84.jpeg",
+    "sha256": "9d9e9771742fa8ebbb75525ed758ef792c5474fbdfa86a492fd908e4427baac7"
+  },
+  {
+    "indice": 85,
+    "origen": "public/img/products/tablas-picar/0b4aa360-b42b-444f-a85e-7a8c89618e04.webp",
+    "destino": "public/img/products/tablas-picar/ambientes/escena-85.webp",
+    "sha256": "2519630d076dc78c69fe1d8ea107a36ee47085c2e52bad30e8b8745db30e097b"
+  },
+  {
+    "indice": 86,
+    "origen": "public/img/products/tablas-picar/4a0c7a60-68b5-48e2-a9ed-543a6b0e94c0.webp",
+    "destino": "public/img/products/tablas-picar/ambientes/escena-86.webp",
+    "sha256": "525c1fdbbe293cc8cc58be90939bbc75934643d8ac27abd948b79974c805c867"
+  },
+  {
+    "indice": 87,
+    "origen": "public/img/products/tablas-picar/74e8c398-d680-4545-a026-34be7e243c46.webp",
+    "destino": "public/img/products/tablas-picar/ambientes/escena-87.webp",
+    "sha256": "44ff78314ed0f720c5e2fb31d9c12e1e24f47aeaf1391edcaf9f5993c287a57f"
+  },
+  {
+    "indice": 88,
+    "origen": "public/img/products/tablas-picar/910bc6a2-f126-4760-9f60-04fbc018e2aa.webp",
+    "destino": "public/img/products/tablas-picar/ambientes/escena-88.webp",
+    "sha256": "a9cdc776393e2f4b2e32bd0dea386f876cfb5a565c4503f3d6576ab2e2f9d886"
+  },
+  {
+    "indice": 89,
+    "origen": "public/img/products/tablas-picar/e855bbf9-917b-4a55-a922-e9a2fdfecc5d.webp",
+    "destino": "public/img/products/tablas-picar/ambientes/escena-89.webp",
+    "sha256": "3a5ae66a472d94aed6629e48c2afa79c2fd90297a446dbad41d89e12b104341d"
+  },
+  {
+    "indice": 90,
+    "origen": "public/img/products/tablas-picar/ec9c5079-9ecc-4198-995f-6ca2d54a1e35.webp",
+    "destino": "public/img/products/tablas-picar/ambientes/escena-90.webp",
+    "sha256": "56eb9ab94e22daf10cc7c17da2af52c3e150970f4b5c2cec33b79597ffc42b30"
+  },
+  {
+    "indice": 91,
+    "origen": "public/img/products/tablas-picar/edge-grain/tbg-edge-001/ba6fa31a-9830-43ea-afa6-bb5c477569fc.webp",
+    "destino": "public/img/products/tablas-picar/edge-grain/tbg-edge-001/ba6fa31a-9830-43ea-afa6-bb5c477569fc.webp",
+    "sha256": "4cf4d2a36517f88b48540cf250dd0aed34c37a43e7aeb127eb9dfb98583d5018"
+  },
+  {
+    "indice": 92,
+    "origen": "public/img/products/unnamed-removebg-preview.png",
+    "destino": "public/img/products/tablas-picar/bandeja/originales/transparente.png",
+    "sha256": "9678a84337138fd44f59c62016f50f6e8b78642ede60dc50a04411d7c8a863bd"
+  },
+  {
+    "indice": 93,
+    "origen": "public/img/products/unnamed.jpg",
+    "destino": "public/img/products/tablas-picar/bandeja/originales/tabla-bandeja.jpg",
+    "sha256": "1a1ff3c769514ff06cee5f63239de4b87be8cd0e42379453e48d48c9178f7bfb"
+  },
+  {
+    "indice": 94,
+    "origen": "public/img/products/Venta buen fin.jpg",
+    "destino": "public/img/promociones/archivo/buen-fin.jpg",
+    "sha256": "d1850c02c41395ce0dc8d714f965db78fe5270ee8d9dd34bb255dc7372d5b2d0"
+  },
+  {
+    "indice": 95,
+    "origen": "public/img/products/WhatsApp Image 2026-04-23 at 9.56.07 AM.jpeg",
+    "destino": "public/img/promociones/archivo/tabla-con-mango.jpeg",
+    "sha256": "9b1f978efc7d3cd16a24b549b95a690cbf56c247e871fa1b77318274514bf895"
+  },
+  {
+    "indice": 96,
+    "origen": "public/img/products/Evento.pdf",
+    "destino": "public/img/promociones/documentos/evento.pdf",
+    "sha256": "b81ce0dbb829af616dbb6d86a45dfa7e22bd002da068fff2ecd82418b76a62a3"
+  },
+  {
+    "indice": 97,
+    "origen": "public/img/products/Evento.pptx",
+    "destino": "public/img/promociones/documentos/evento.pptx",
+    "sha256": "f3e788306d0a0ecc908429c3d1cb9f352ce8e3df281e97b59e0fcd2fc64c693b"
+  },
+  {
+    "indice": 98,
+    "origen": "public/img/products/MesaAux/Carrito servicio.pptx",
+    "destino": "public/img/referencias/proyectos/carrito-servicio/carrito-servicio.pptx",
+    "sha256": "e9ea0754df4ba6b4e4532c16235212fdd459393833b02b36d122c9e98567afac"
+  }
+]
