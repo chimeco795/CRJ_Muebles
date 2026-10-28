@@ -53,30 +53,13 @@
     "id": 7,
     "nombre": "Tabla de picar Edge Grain",
     "precio": 1350,
-    "descripcion": "Tabla de picar Edge Grain elaborada artesanalmente con Encino y Tzalam seleccionados. Su ensamble longitudinal ofrece alta durabilidad para el uso diario. Integra canal perimetral recolector de jugos, perforación lateral para mejor agarre, bordes suavizados a mano y gomas antideslizantes. Terminada con aceite mineral grado alimentario y cera de abeja natural.",
+    "descripcion": "Tabla de picar tipo Edge Grain. Excelente balance entre durabilidad y cuidado del filo.",
     "imagen": "public/img/products/tablas/tabla-de-picar-edge-grain/portada.webp",
     "linea": "tablas",
     "destacado": 1,
     "galeria": [
       "public/img/products/tablas/tabla-de-picar-edge-grain/vista-01.webp",
       "public/img/products/tablas/tabla-de-picar-edge-grain/vista-02.webp"
-    ],
-    "detalles": [
-      "Madera: Encino y Tzalam seleccionados.",
-      "Ensamble tipo Edge Grain para mayor durabilidad.",
-      "Largo: 35 cm.",
-      "Ancho: 25 cm.",
-      "Grosor: 1” (2.54 cm).",
-      "Canal perimetral recolector de jugos.",
-      "Perforación lateral para mejor agarre.",
-      "Bordes suavizados a mano.",
-      "Aceite mineral grado alimentario.",
-      "Sellado final con cera de abeja natural.",
-      "Gomas antideslizantes.",
-      "Resistencia elevada a humedad y deformación.",
-      "Fácil mantenimiento.",
-      "Elaborada artesanalmente en México.",
-      "Selección de vetas y control de calidad por pieza."
     ]
   },
   {

@@ -1,6 +1,6 @@
 'use strict';
 // Increment this single version when releasing changed shell assets.
-const CACHE_NAME = 'crj-muebles-v14';
+const CACHE_NAME = 'crj-muebles-v13';
 const ROOT = new URL('./', self.location.href);
 const local = path => new URL(path, ROOT).href;
 const SHELL = [
