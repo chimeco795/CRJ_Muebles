@@ -193,5 +193,24 @@
       "public/img/products/mascotas/nicho-cama-para-mascota/vista-01.webp",
       "public/img/products/mascotas/nicho-cama-para-mascota/vista-02.webp"
     ]
+  },
+  {
+    "id": 17,
+    "nombre": "Tabla de Banak con agarraderas",
+    "linea": "tablas",
+    "precio": 350,
+    "descripcion": "Tabla de Banak de formato alargado, diseñada para preparar, servir y presentar alimentos. Integra agarraderas en ambos extremos para facilitar su manejo y un espacio contenedor que ayuda a separar y organizar ingredientes durante la preparación.",
+    "detalles": [
+      "Madera de Banak.",
+      "Medidas aproximadas: 60 × 24 cm.",
+      "Grosor aproximado: 18 mm.",
+      "Agarraderas en ambos extremos.",
+      "Diseño utilizable por ambos lados.",
+      "Espacio contenedor integrado.",
+      "Acabado con aceite mineral y cera de abeja.",
+      "Puede utilizarse para preparar, servir y presentar."
+    ],
+    "imagen": "public/img/products/tablas/tabla-de-banak-con-agarraderas/portada.webp",
+    "galeria": []
   }
 ]
