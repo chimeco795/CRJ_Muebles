@@ -76,11 +76,11 @@ test('catalog data uses network first, retaining the last successful response of
   w.setOffline(false); w.setResponse('server error', 503);
   assert.equal(await (await w.request('data/productos.json', 'cors')).text(), '[{"id":99}]');
 });
-test('shell avoids network calls and an uncached offline image has a real fallback', async () => {
+test('shell checks network and falls back offline; missing images have a real fallback', async () => {
   const w = worker(); await w.lifecycle('install'); w.setOffline(true);
   const before = w.requests;
   assert.match(await (await w.request('styles.css', 'cors', 'style')).text(), /--color-bg/);
-  assert.equal(w.requests, before);
+  assert.equal(w.requests, before + 1);
   assert.match(await (await w.request('unknown.webp', 'cors', 'image')).text(), /Fotografía no disponible/);
 });
 test('external requests, unknown pages and writes are not intercepted', async () => {
@@ -89,4 +89,16 @@ test('external requests, unknown pages and writes are not intercepted', async ()
   assert.equal(w.request('../another-app/index.html'), undefined);
   assert.equal(w.request('missing.html'), undefined);
   assert.equal(w.request('data/productos.json', 'cors', '', 'POST'), undefined);
+});
+test('catalog images are automatically precached and scripts refresh online', async () => {
+  const w=worker(); await w.lifecycle('install');
+  const products=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/productos.json'),'utf8'));
+  w.setOffline(true);
+  for(const p of products.filter(p=>p.activo!==false)) {
+    for(const image of [p.imagen,...(p.galeria||[])].filter(Boolean)) assert.equal((await w.request(image,'cors','image')).status,200);
+  }
+  w.setOffline(false); w.setResponse('updated script');
+  assert.equal(await (await w.request('app.js','cors','script')).text(),'updated script');
+  w.setOffline(true);
+  assert.equal(await (await w.request('app.js','cors','script')).text(),'updated script');
 });

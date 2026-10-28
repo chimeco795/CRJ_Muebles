@@ -4,9 +4,10 @@
     "nombre": "Cama suelo Montessori",
     "precio": 2890,
     "descripcion": "Cama baja en madera clara, pensada para que pueda subir y bajar sin ayuda. Bordes suaves y línea simple.",
-    "imagen": "public/img/products/montessori/cama-piso/mnt-cama-001/01-cover.webp",
+    "imagen": "public/img/products/montessori/cama-suelo-montessori/portada.webp",
     "linea": "montessori",
-    "destacado": 3
+    "destacado": 3,
+    "galeria": []
   },
   {
     "id": 2,
@@ -53,12 +54,12 @@
     "nombre": "Tabla de picar Edge Grain",
     "precio": 1350,
     "descripcion": "Tabla de picar tipo Edge Grain. Excelente balance entre durabilidad y cuidado del filo.",
-    "imagen": "public/img/products/tablas-picar/edge-grain/tbg-edge-001/ba6fa31a-9830-43ea-afa6-bb5c477569fc.webp",
+    "imagen": "public/img/products/tablas/tabla-de-picar-edge-grain/portada.webp",
     "linea": "tablas",
     "destacado": 1,
     "galeria": [
-      "public/img/products/tablas-picar/rayas/web/detalle.webp",
-      "public/img/products/tablas-picar/rayas/web/conjunto.webp"
+      "public/img/products/tablas/tabla-de-picar-edge-grain/vista-01.webp",
+      "public/img/products/tablas/tabla-de-picar-edge-grain/vista-02.webp"
     ]
   },
   {
@@ -82,7 +83,7 @@
     "nombre": "Tabla de madera con mango",
     "precio": null,
     "descripcion": "Tabla rectangular con mango integrado. Una pieza para preparar y presentar en la cocina.",
-    "imagen": "public/img/products/tablas-picar/con-mango/web/portada.webp",
+    "imagen": "public/img/products/tablas/tabla-de-madera-con-mango/portada.webp",
     "linea": "tablas",
     "galeria": [],
     "detalles": [
@@ -95,12 +96,12 @@
     "nombre": "Organizador con cajón",
     "precio": null,
     "descripcion": "Dos niveles abiertos y un cajón para reunir tus objetos cotidianos. Explora sus vistas y consulta cómo integrarlo a tu espacio.",
-    "imagen": "public/img/products/muebles/organizador-con-cajon/web/portada.webp",
+    "imagen": "public/img/products/muebles/organizador-con-cajon/portada.webp",
     "linea": "muebles",
     "galeria": [
-      "public/img/products/muebles/organizador-con-cajon/web/cajon.webp",
-      "public/img/products/muebles/organizador-con-cajon/web/detalle.webp",
-      "public/img/products/muebles/organizador-con-cajon/web/lateral.webp"
+      "public/img/products/muebles/organizador-con-cajon/vista-01.webp",
+      "public/img/products/muebles/organizador-con-cajon/vista-02.webp",
+      "public/img/products/muebles/organizador-con-cajon/vista-03.webp"
     ],
     "detalles": [
       "Estantes abiertos y cajón frontal.",
@@ -113,11 +114,11 @@
     "nombre": "Especiero de bandejas",
     "precio": null,
     "descripcion": "Un organizador de tres niveles para tener a la vista los objetos que usas en la cocina. Las fotografías muestran la pieza en el taller.",
-    "imagen": "public/img/products/muebles/especiero-bandejas/web/portada.webp",
+    "imagen": "public/img/products/muebles/especiero-de-bandejas/portada.webp",
     "linea": "muebles",
     "galeria": [
-      "public/img/products/muebles/especiero-bandejas/web/frente.webp",
-      "public/img/products/muebles/especiero-bandejas/web/lateral.webp"
+      "public/img/products/muebles/especiero-de-bandejas/vista-01.webp",
+      "public/img/products/muebles/especiero-de-bandejas/vista-02.webp"
     ],
     "detalles": [
       "Tres bandejas en una estructura de madera.",
@@ -129,11 +130,11 @@
     "nombre": "Cama de madera para mascota",
     "precio": null,
     "descripcion": "Una cama de madera con entrada frontal rebajada. Cuéntanos el tamaño de tu mascota y el espacio donde quieres colocarla.",
-    "imagen": "public/img/products/muebles/cama-mascota/web/portada.webp",
+    "imagen": "public/img/products/muebles/cama-de-madera-para-mascota/portada.webp",
     "linea": "muebles",
     "galeria": [
-      "public/img/products/muebles/cama-mascota/web/perspectiva.webp",
-      "public/img/products/muebles/cama-mascota/web/estructura.webp"
+      "public/img/products/muebles/cama-de-madera-para-mascota/vista-01.webp",
+      "public/img/products/muebles/cama-de-madera-para-mascota/vista-02.webp"
     ],
     "detalles": [
       "Estructura elevada con acceso frontal.",
@@ -145,10 +146,10 @@
     "nombre": "Mesa con insertos",
     "precio": null,
     "descripcion": "Una superficie de trabajo con espacios para insertos. Consulta este proyecto y las necesidades de tu cocina o zona de servicio.",
-    "imagen": "public/img/products/muebles/mesa-insertos/web/portada.webp",
+    "imagen": "public/img/products/muebles/mesa-con-insertos/portada.webp",
     "linea": "muebles",
     "galeria": [
-      "public/img/products/muebles/mesa-insertos/web/detalle.webp"
+      "public/img/products/muebles/mesa-con-insertos/vista-01.webp"
     ],
     "detalles": [
       "Cubierta con seis espacios para insertos.",
@@ -160,7 +161,7 @@
     "nombre": "Bandeja de madera a rayas",
     "precio": null,
     "descripcion": "Una pieza de madera con borde perimetral y composición a rayas. Consulta sus opciones para servir y presentar.",
-    "imagen": "public/img/products/tablas-picar/bandeja/web/portada.webp",
+    "imagen": "public/img/products/tablas/bandeja-de-madera-a-rayas/portada.webp",
     "linea": "tablas",
     "galeria": [],
     "detalles": [

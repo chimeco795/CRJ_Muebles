@@ -1,3 +1,5 @@
+> Documento histórico. Para la estructura y gestión actuales, consultar [gestion-productos.md](gestion-productos.md).
+
 # Modernización de CRJ Muebles
 
 > Informe histórico de la primera entrega. La organización de archivos, catálogo y PWA actuales se describen en [imagenes-y-pwa.md](imagenes-y-pwa.md), actualización del 30/09/2026.

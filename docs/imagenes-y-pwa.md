@@ -1,3 +1,5 @@
+> Documento histórico. Para la estructura y gestión actuales, consultar [gestion-productos.md](gestion-productos.md).
+
 # Fotografías, contenido e instalación de CRJ Muebles
 
 Actualización del 30 de septiembre de 2026. Complementa y sustituye los datos de estado de la primera entrega descrita en `modernizacion.md`.

@@ -1,34 +1,50 @@
 (() => {
   'use strict';
   const CONTACT = { whatsapp: '525537027887' };
-  const CATEGORIES = { tablas: 'Tablas de picar', muebles: 'Muebles', montessori: 'Montessori' };
-  const ALIASES = { grill: 'tablas', medida: 'muebles' };
+  const CATEGORIES = CRJCatalog.categories;
+  const ALIASES = CRJCatalog.aliases;
   const currency = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 2 });
   const $ = selector => document.querySelector(selector);
   const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   const priceText = price => price === null ? 'Precio a consultar' : `${currency.format(price)} MXN`;
   const whatsapp = text => `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(text)}`;
   let productsPromise;
-
-  // One data request per page. A failed request can be retried explicitly.
   function loadProducts() {
-    if (!productsPromise) productsPromise = fetch('data/productos.json', { cache: 'no-cache', signal: AbortSignal.timeout(10000) })
+    if (!productsPromise) productsPromise = fetch('data/productos.json', {cache:'no-cache', signal:AbortSignal.timeout(10000)})
       .then(response => { if (!response.ok) throw new Error('Catálogo no disponible'); return response.json(); })
-      .then(data => {
-        if (!Array.isArray(data)) throw new Error('Formato incorrecto');
-        const ids = new Set();
-        return data.map(item => {
-          if (!item || item.id == null || typeof item.nombre !== 'string' || ids.has(String(item.id))) throw new Error('Producto incorrecto');
-          ids.add(String(item.id));
-          const category = ALIASES[item.linea] || item.linea;
-          return { ...item, id: String(item.id), categoria: category,
-            categoriaNombre: CATEGORIES[category] || 'Piezas de madera',
-            descripcion: typeof item.descripcion === 'string' ? item.descripcion : '',
-            precio: typeof item.precio === 'number' && Number.isFinite(item.precio) && item.precio >= 0 ? item.precio : null,
-            imagen: typeof item.imagen === 'string' && item.imagen ? item.imagen : null };
+      .then(CRJCatalog.normalize)
+      .then(products => {
+        const available = CRJCatalog.availableCategories(products);
+        document.querySelectorAll('[data-nav]').forEach(anchor => {
+          if (CATEGORIES[anchor.dataset.nav]) anchor.hidden = !available.includes(anchor.dataset.nav);
         });
+        return products;
       }).catch(error => { productsPromise = undefined; throw error; });
     return productsPromise;
+  }
+
+  async function initCategories() {
+    const container = $('#home-categories'); loading(container);
+    try {
+      const products = await loadProducts();
+      const available = CRJCatalog.availableCategories(products);
+      const cards = available.map((category, index) => {
+        const product = products.find(p => p.categoria === category && p.imagen);
+        const card = link('', `tienda.html?categoria=${category}`, 'category-card');
+        if (product) {
+          const image = el('img', 'category-image'); image.src = product.imagen; image.alt = product.nombre;
+          image.width = 800; image.height = 600; image.loading = 'lazy';
+          image.addEventListener('error', () => { image.src = 'img/placeholder.svg'; }, {once:true}); card.append(image);
+        }
+        const copy = el('div'); copy.append(el('h3', '', CATEGORIES[category]));
+        const arrow = el('span', 'category-arrow', '↗'); arrow.setAttribute('aria-hidden','true');
+        card.append(el('span', 'category-number', String(index + 1).padStart(2,'0')), copy, arrow);
+        return card;
+      });
+      container.replaceChildren(...cards);
+      container.closest('section').hidden = !cards.length;
+    } catch { state(container, 'Explora nuestras piezas', 'No pudimos cargar las líneas del taller.', button('Volver a intentar', initCategories)); }
+    finally { container.setAttribute('aria-busy','false'); }
   }
 
   function el(tag, className, text) {
@@ -85,13 +101,13 @@
     }
     return group;
   }
-  function card(product, heading = 'h2') {
+  function card(product, heading = 'h2', eager = false) {
     const node = link('', `producto.html?id=${encodeURIComponent(product.id)}`, 'product-card');
     const info = el('div', 'product-card-info');
     info.append(el('p', 'eyebrow', product.categoriaNombre), el(heading, '', product.nombre));
     const bottom = el('div', 'card-bottom');
     bottom.append(el('span', 'price', priceText(product.precio)), el('span', 'card-action', 'Ver pieza ↗'));
-    info.append(bottom); node.append(media(product), info); return node;
+    info.append(bottom); node.append(media(product, eager), info); return node;
   }
   function state(container, title, message, action, heading = 'h2') {
     const box = el('div', 'state-panel');
@@ -127,11 +143,7 @@
     loading(container); input.disabled = true; clear.disabled = true; filters.replaceChildren(); $('#catalog-summary').textContent = '';
     try {
       const products = await loadProducts();
-      if (!products.length) {
-        state(container, 'Estamos preparando el catálogo', 'Mientras tanto, podemos conversar sobre tu proyecto.', link('Cotizar proyecto ↗', whatsapp('Hola, quiero consultar un proyecto personalizado con CRJ Muebles.'), 'button button-primary'));
-        return;
-      }
-      const available = Object.keys(CATEGORIES).filter(key => products.some(p => p.categoria === key));
+      const available = CRJCatalog.availableCategories(products);
       const params = new URLSearchParams(location.search);
       let category = ALIASES[params.get('linea')] || params.get('categoria') || params.get('linea') || 'todos';
       if (!available.includes(category)) category = 'todos';
@@ -146,7 +158,7 @@
         matching.sort((a, b) => Number(!a.imagen) - Number(!b.imagen) || Object.keys(CATEGORIES).indexOf(a.categoria) - Object.keys(CATEGORIES).indexOf(b.categoria));
         filters.querySelectorAll('button').forEach(node => node.setAttribute('aria-pressed', String(node.dataset.category === category)));
         $('#catalog-summary').textContent = `${matching.length} ${matching.length === 1 ? 'pieza' : 'piezas'}`;
-        if (matching.length) container.replaceChildren(...matching.map(p => card(p)));
+        if (matching.length) container.replaceChildren(...matching.map((p, index) => card(p, 'h2', index === 0)));
         else state(container, 'Sin resultados', 'Prueba con otra palabra o explora todas las piezas.', button('Limpiar búsqueda y filtros', () => { reset(); input.focus(); }));
         const url = new URL(location.href); url.searchParams.delete('linea');
         if (category === 'todos') url.searchParams.delete('categoria'); else url.searchParams.set('categoria', category);
@@ -175,9 +187,11 @@
       }
       metadata(`${product.nombre} | CRJ Muebles`, product.descripcion);
       const article = el('article', 'product-detail'), content = el('div', 'product-copy');
-      content.append(link(product.categoriaNombre, `tienda.html?categoria=${product.categoria}`, 'eyebrow category-link'), el('h1', '', product.nombre), el('p', 'product-price', priceText(product.precio)), el('p', 'product-description', product.descripcion));
+      content.append(link(product.categoriaNombre, `tienda.html?categoria=${product.categoria}`, 'eyebrow category-link'), el('h1', '', product.nombre), el('p', 'product-price', priceText(product.precio)));
+      if (product.stock === 0) content.append(el('p', 'small muted', 'Consultar disponibilidad'));
+      if (product.descripcion.trim()) content.append(el('p', 'product-description', product.descripcion));
       const url = new URL('producto.html', location.href); url.searchParams.set('id', product.id);
-      const message = `Hola, me interesa consultar la pieza “${product.nombre}” que vi en CRJ Muebles.${product.precio === null ? '' : `\nPrecio publicado: ${priceText(product.precio)}`}\n\nProducto: ${url.href}`;
+      const message = CRJCatalog.quoteMessage(product, url.href, priceText);
       const actions = el('div', 'product-contact'), wa = link('Consultar por WhatsApp ↗', whatsapp(message), 'button button-whatsapp'); wa.id = 'whatsapp-btn';
       actions.append(wa, el('p', 'small muted', 'Conversemos sobre esta pieza y lo que necesitas para tu espacio.'));
       content.append(actions, link('¿Buscas algo a la medida? →', 'index.html#proyectos'));
@@ -219,6 +233,7 @@
     }, { once: true });
   }
   initShell(); initPwa();
+  if ($('#home-categories')) initCategories();
   if ($('#productos-destacados')) initFeatured();
   if ($('#lista-productos')) initCatalog();
   if ($('#product-detail')) initProduct();
