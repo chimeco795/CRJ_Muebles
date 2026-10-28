@@ -142,7 +142,7 @@ noscript p { padding: 24px; background: var(--color-surface); }
   .hero { grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; padding-top: 48px; }
   .hero h1 { font-size: clamp(2.8rem, 5.4vw, 4.5rem); }
   .hero-image { aspect-ratio: .94; }
-  .category-grid { grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--color-border); }
+  .category-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border-bottom: 1px solid var(--color-border); }
   .category-card { border-bottom: 0; padding: 28px 16px; grid-template-columns: 1fr 24px; }
   .category-card:first-child { padding-left: 0; }
   .category-card + .category-card { border-left: 1px solid var(--color-border); }

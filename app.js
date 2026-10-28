@@ -15,6 +15,13 @@
       .then(CRJCatalog.normalize)
       .then(products => {
         const available = CRJCatalog.availableCategories(products);
+        const nav = $('#main-nav'), catalogLink = nav?.querySelector('[data-nav="catalogo"]');
+        available.forEach(category => {
+          if (catalogLink && !nav.querySelector(`[data-nav="${category}"]`)) {
+            const anchor = link(CATEGORIES[category], `tienda.html?categoria=${category}`);
+            anchor.dataset.nav = category; nav.insertBefore(anchor, catalogLink);
+          }
+        });
         document.querySelectorAll('[data-nav]').forEach(anchor => {
           if (CATEGORIES[anchor.dataset.nav]) anchor.hidden = !available.includes(anchor.dataset.nav);
         });

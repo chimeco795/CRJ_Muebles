@@ -10,7 +10,7 @@ function validateCatalog(items, root = ROOT) {
     const urls = [p.imagen, ...(Array.isArray(p.galeria) ? p.galeria : [])].filter(url => url !== null && url !== undefined);
     for (const url of urls) {
       const label = `Folio ${p.id ?? 'faltante'}: imagen ${JSON.stringify(url)}`;
-      if (typeof url !== 'string' || !/^public\/img\/products\/(tablas|muebles|montessori)\/[a-z0-9-]+\/[a-zA-Z0-9_.-]+\.(webp|png|jpe?g)$/.test(url)) { errors.push(`${label}: ruta inválida; usa products/{categoria}/{slug}/archivo.webp`); continue; }
+      if (typeof url !== 'string' || !/^public\/img\/products\/(tablas|muebles|montessori|mascotas)\/[a-z0-9-]+\/[a-zA-Z0-9_.-]+\.(webp|png|jpe?g)$/.test(url)) { errors.push(`${label}: ruta inválida; usa products/{categoria}/{slug}/archivo.webp`); continue; }
       if (url.split('/')[3] !== model.category(p)) errors.push(`${label}: carpeta y categoría no coinciden`);
       if (!fs.existsSync(path.join(root, url))) errors.push(`${label}: archivo inexistente`);
     }

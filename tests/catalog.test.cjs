@@ -33,3 +33,13 @@ test('WhatsApp includes folio/name/URL and preserves nullable or zero prices', (
   assert.match(text,/folio 16/);assert.match(text,/Solo prueba/);assert.ok(text.includes(url));assert.ok(!text.includes('Precio publicado'));
   assert.match(model.quoteMessage({...product,precio:0},url,p=>`$${p} MXN`),/Precio publicado: \$0 MXN/);
 });
+
+test('Mascotas accepts active products and disappears when all are inactive', () => {
+  const pet = {...product,linea:'mascotas',imagen:'public/img/products/mascotas/nicho-cama-para-mascota/portada.webp'};
+  assert.deepEqual(validateCatalog([pet]), []);
+  const normalized = model.normalize([pet]);
+  assert.equal(normalized[0].categoriaNombre, 'Mascotas');
+  assert.deepEqual(model.availableCategories(normalized), ['mascotas']);
+  assert.deepEqual(model.availableCategories(model.normalize([{...pet,activo:false}])), []);
+  assert.ok(validateCatalog([{...pet,imagen:pet.imagen.replace('/mascotas/','/muebles/')}]).length);
+});

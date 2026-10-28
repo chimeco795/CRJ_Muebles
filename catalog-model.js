@@ -5,7 +5,7 @@
   else root.CRJCatalog = model;
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
-  const categories = {tablas:'Tablas de picar', muebles:'Muebles', montessori:'Montessori'};
+  const categories = {tablas:'Tablas de picar', muebles:'Muebles', montessori:'Montessori', mascotas:'Mascotas'};
   const aliases = {grill:'tablas', medida:'muebles'};
   const category = item => aliases[item.linea ?? item.categoria] || item.linea || item.categoria;
   function errors(items) {
@@ -19,7 +19,7 @@
       else if (ids.has(String(p.id))) fail('id duplicado');
       else ids.add(String(p.id));
       for (const field of ['nombre','descripcion']) if (typeof p[field] !== 'string' || !p[field].trim()) fail(`${field} obligatorio`);
-      if (!Object.hasOwn(categories, category(p))) fail('categoría inválida: usa tablas, muebles o montessori');
+      if (!Object.hasOwn(categories, category(p))) fail('categoría inválida: usa tablas, muebles, montessori o mascotas');
       if (p.linea && p.categoria && (aliases[p.linea] || p.linea) !== (aliases[p.categoria] || p.categoria)) fail('linea y categoria se contradicen');
       if (p.precio !== null && (typeof p.precio !== 'number' || !Number.isFinite(p.precio) || p.precio < 0)) fail('precio obligatorio: número no negativo o null');
       if (p.imagen !== null && (typeof p.imagen !== 'string' || !p.imagen.trim())) fail('imagen obligatoria: ruta local o null');

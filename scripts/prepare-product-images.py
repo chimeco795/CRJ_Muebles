@@ -5,7 +5,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--categoria', choices=['tablas', 'muebles', 'montessori'], required=True)
+parser.add_argument('--categoria', choices=['tablas', 'muebles', 'montessori', 'mascotas'], required=True)
 parser.add_argument('--slug', required=True)
 parser.add_argument('fotos', nargs='+', type=Path)
 args = parser.parse_args()

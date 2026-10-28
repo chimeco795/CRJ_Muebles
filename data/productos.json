@@ -130,12 +130,12 @@
     "nombre": "Cama de madera para mascota",
     "precio": 1200,
     "descripcion": "Cama artesanal para perro fabricada en madera maciza de Banak, con entrada frontal baja para facilitar el acceso. Acabado con aceite mineral y cera de abeja para realzar la veta y proteger la madera. Incluye cojín suave y está pensada para perros pequeños y medianos.",
-    "imagen": "public/img/products/muebles/cama-de-madera-para-mascota/portada.webp",
-    "linea": "muebles",
+    "imagen": "public/img/products/mascotas/cama-de-madera-para-mascota/portada.webp",
+    "linea": "mascotas",
     "galeria": [
-      "public/img/products/muebles/cama-de-madera-para-mascota/vista-01.webp",
-      "public/img/products/muebles/cama-de-madera-para-mascota/vista-02.webp",
-      "public/img/products/muebles/cama-de-madera-para-mascota/vista-03.webp"
+      "public/img/products/mascotas/cama-de-madera-para-mascota/vista-01.webp",
+      "public/img/products/mascotas/cama-de-madera-para-mascota/vista-02.webp",
+      "public/img/products/mascotas/cama-de-madera-para-mascota/vista-03.webp"
     ],
     "detalles": [
       "Madera maciza de Banak.",
@@ -178,7 +178,7 @@
   {
     "id": 16,
     "nombre": "Nicho / cama para mascota",
-    "linea": "muebles",
+    "linea": "mascotas",
     "precio": 800,
     "descripcion": "Cama para mascota de diseño moderno y cómodo, fabricada en MDF de alta calidad con detalles en madera. Su formato amplio y acogedor está pensado para brindar un espacio propio de descanso dentro del hogar.",
     "detalles": [
@@ -188,11 +188,10 @@
       "Espacio amplio y acogedor para descanso.",
       "Envío incluido."
     ],
-    "imagen": "public/img/products/muebles/nicho-cama-para-mascota/portada.webp",
+    "imagen": "public/img/products/mascotas/nicho-cama-para-mascota/portada.webp",
     "galeria": [
-      "public/img/products/muebles/nicho-cama-para-mascota/vista-01.webp",
-      "public/img/products/muebles/nicho-cama-para-mascota/vista-02.webp",
-      "public/img/products/muebles/nicho-cama-para-mascota/vista-03.webp"
+      "public/img/products/mascotas/nicho-cama-para-mascota/vista-01.webp",
+      "public/img/products/mascotas/nicho-cama-para-mascota/vista-02.webp"
     ]
   }
 ]
