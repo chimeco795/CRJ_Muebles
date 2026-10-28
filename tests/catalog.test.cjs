@@ -25,7 +25,7 @@ test('inactive products never contribute to filters or exact-ID lookup', () => {
 });
 test('next folio considers inactive records and never modifies the catalog', () => {
   const records=[product,{...product,id:20,activo:false}],before=JSON.stringify(records);
-  assert.equal(model.nextId(records),21); assert.equal(JSON.stringify(records),before); assert.equal(model.nextId(catalog),16);
+  assert.equal(model.nextId(records),21); assert.equal(JSON.stringify(records),before); assert.equal(model.nextId(catalog),Math.max(...catalog.map(p=>p.id))+1);
 });
 test('WhatsApp includes folio/name/URL and preserves nullable or zero prices', () => {
   const url='https://example.test/CRJ_Muebles/producto.html?id=16';

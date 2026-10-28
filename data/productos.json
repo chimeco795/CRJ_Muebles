@@ -128,17 +128,23 @@
   {
     "id": 13,
     "nombre": "Cama de madera para mascota",
-    "precio": null,
-    "descripcion": "Una cama de madera con entrada frontal rebajada. Cuéntanos el tamaño de tu mascota y el espacio donde quieres colocarla.",
+    "precio": 1200,
+    "descripcion": "Cama artesanal para perro fabricada en madera maciza de Banak, con entrada frontal baja para facilitar el acceso. Acabado con aceite mineral y cera de abeja para realzar la veta y proteger la madera. Incluye cojín suave y está pensada para perros pequeños y medianos.",
     "imagen": "public/img/products/muebles/cama-de-madera-para-mascota/portada.webp",
     "linea": "muebles",
     "galeria": [
       "public/img/products/muebles/cama-de-madera-para-mascota/vista-01.webp",
-      "public/img/products/muebles/cama-de-madera-para-mascota/vista-02.webp"
+      "public/img/products/muebles/cama-de-madera-para-mascota/vista-02.webp",
+      "public/img/products/muebles/cama-de-madera-para-mascota/vista-03.webp"
     ],
     "detalles": [
-      "Estructura elevada con acceso frontal.",
-      "Consulta medidas y qué incluye la cotización."
+      "Madera maciza de Banak.",
+      "Modelo pequeño.",
+      "Medidas exteriores aproximadas: 50 × 40 × 15 cm.",
+      "Entrada frontal baja.",
+      "Acabado con aceite mineral y cera de abeja.",
+      "Incluye cojín.",
+      "Hecha a mano."
     ]
   },
   {
@@ -167,6 +173,26 @@
     "detalles": [
       "Borde elevado alrededor de la superficie.",
       "Consulta medidas y uso previsto."
+    ]
+  },
+  {
+    "id": 16,
+    "nombre": "Nicho / cama para mascota",
+    "linea": "muebles",
+    "precio": 800,
+    "descripcion": "Cama para mascota de diseño moderno y cómodo, fabricada en MDF de alta calidad con detalles en madera. Su formato amplio y acogedor está pensado para brindar un espacio propio de descanso dentro del hogar.",
+    "detalles": [
+      "MDF de alta calidad con detalles en madera.",
+      "Medidas aproximadas: 70 × 50 × 25 cm.",
+      "Diseño moderno y cómodo.",
+      "Espacio amplio y acogedor para descanso.",
+      "Envío incluido."
+    ],
+    "imagen": "public/img/products/muebles/nicho-cama-para-mascota/portada.webp",
+    "galeria": [
+      "public/img/products/muebles/nicho-cama-para-mascota/vista-01.webp",
+      "public/img/products/muebles/nicho-cama-para-mascota/vista-02.webp",
+      "public/img/products/muebles/nicho-cama-para-mascota/vista-03.webp"
     ]
   }
 ]
