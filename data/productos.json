@@ -211,6 +211,8 @@
       "Puede utilizarse para preparar, servir y presentar."
     ],
     "imagen": "public/img/products/tablas/tabla-de-banak-con-agarraderas/portada.webp",
-    "galeria": []
+    "galeria": [
+      "public/img/products/tablas/tabla-de-banak-con-agarraderas/vista-01.webp"
+    ]
   }
 ]
