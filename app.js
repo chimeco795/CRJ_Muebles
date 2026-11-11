@@ -170,6 +170,12 @@
         const url = new URL(location.href); url.searchParams.delete('linea');
         if (category === 'todos') url.searchParams.delete('categoria'); else url.searchParams.set('categoria', category);
         if (input.value.trim()) url.searchParams.set('q', input.value.trim()); else url.searchParams.delete('q');
+        canonical(category === 'todos' ? 'tienda.html' : `tienda.html?categoria=${category}`);
+        if (category === 'todos') {
+          metadata('Catálogo de piezas de madera | CRJ Muebles', 'Explora tablas de picar, muebles, piezas Montessori y camas para mascotas. Consulta fotografías, medidas y precios del catálogo de CRJ Muebles.');
+        } else {
+          metadata(`${CATEGORIES[category]} | Catálogo CRJ Muebles`, `Consulta las piezas de la categoría ${CATEGORIES[category]} del taller CRJ Muebles, con fotografías y detalles de cada producto.`);
+        }
         history.replaceState(null, '', url); updateNav(category === 'todos' ? '' : category);
       }
       function reset() { input.value = ''; category = 'todos'; render(); }
@@ -177,6 +183,17 @@
       input.disabled = false; clear.disabled = false; render();
     } catch { state(container, 'No pudimos cargar el catálogo', 'Revisa tu conexión y vuelve a intentar. Las piezas guardadas en una visita anterior pueden consultarse sin conexión.', button('Volver a intentar', initCatalog)); }
     finally { container.setAttribute('aria-busy', 'false'); }
+  }
+  function canonical(route) {
+    const href = new URL(route, 'https://chimeco795.github.io/CRJ_Muebles/').href;
+    const tag = document.querySelector('link[rel="canonical"]') || document.createElement('link');
+    tag.rel = 'canonical';
+    tag.href = href;
+    document.head.append(tag);
+    const social = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    social.setAttribute('property', 'og:url');
+    social.content = href;
+    document.head.append(social);
   }
   function metadata(title, description) {
     document.title = title; $('meta[name="description"]').content = description;
@@ -188,10 +205,13 @@
       const products = await loadProducts();
       const product = products.find(p => p.id === new URLSearchParams(location.search).get('id'));
       if (!product) {
+        const robots = document.createElement('meta');
+        robots.name = 'robots'; robots.content = 'noindex'; document.head.append(robots);
         metadata('Producto no encontrado | CRJ Muebles', 'Explora las piezas disponibles en el catálogo de CRJ Muebles.');
         const actions = el('div', 'actions'); actions.append(link('Volver al catálogo', 'tienda.html', 'button button-primary'), link('Ir al inicio', 'index.html', 'button button-secondary'));
         state(container, 'Producto no encontrado', 'Esta pieza no está en nuestro catálogo. Puedes explorar las demás o volver al inicio.', actions, 'h1'); return;
       }
+      canonical(`producto.html?id=${encodeURIComponent(product.id)}`);
       metadata(`${product.nombre} | CRJ Muebles`, product.descripcion);
       const article = el('article', 'product-detail'), content = el('div', 'product-copy');
       content.append(link(product.categoriaNombre, `tienda.html?categoria=${product.categoria}`, 'eyebrow category-link'), el('h1', '', product.nombre), el('p', 'product-price', priceText(product.precio)));
