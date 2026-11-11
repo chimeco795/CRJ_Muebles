@@ -1,0 +1,12 @@
+# Archivos de trabajo que no forman parte del catálogo público de Pages.
+exclude:
+  - entrada-fotos
+  - scripts
+  - tests
+  - AUDITORIA_PRODUCCION.md
+  - README.md
+  - runserver.py
+  - docs/gestion-productos.md
+  - docs/modernizacion.md
+  - docs/imagenes-y-pwa.md
+  - docs/organizacion-imagenes.json

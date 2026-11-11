@@ -1,11 +1,11 @@
 'use strict';
 // Increment this single version when releasing changed shell assets.
-const CACHE_NAME = 'crj-muebles-v17';
+const CACHE_NAME = 'crj-muebles-v18';
 const ROOT = new URL('./', self.location.href);
 const local = path => new URL(path, ROOT).href;
 const SHELL = [
-  'index.html', 'tienda.html', 'producto.html', 'styles.css', 'catalog-model.js',
-  'app.js', 'install.js', 'manifest.json', 'data/productos.json', 'img/placeholder.svg',
+  'index.html', 'tienda.html', 'producto.html', 'privacidad.html', 'terminos.html', 'styles.css', 'catalog-model.js',
+  'analytics.js', 'app.js', 'install.js', 'manifest.json', 'data/productos.json', 'img/placeholder.svg',
   'public/img/marca/logo-crj.png', 'public/img/marca/icon-192.png', 'public/img/marca/icon-512.png',
   'public/img/products/tablas-picar/rayas/web/portada.webp'
 ].map(local);
@@ -59,7 +59,13 @@ self.addEventListener('fetch', event => {
   if (request.mode === 'navigate') {
     // Query parameters select content in JS; each page shares its HTML shell.
     const page = path || 'index.html';
-    if (['index.html', 'tienda.html', 'producto.html'].includes(page)) event.respondWith(networkFirst(request, local(page)));
+    if (/^pieza-\d+\.html$/.test(page)) {
+      event.respondWith((async () => {
+        const response = await networkFirst(request, local(page));
+        if (response.status === 503) return (await (await caches.open(CACHE_NAME)).match(local('producto.html'))) || response;
+        return response;
+      })());
+    } else if (['index.html', 'tienda.html', 'producto.html', 'privacidad.html', 'terminos.html'].includes(page)) event.respondWith(networkFirst(request, local(page)));
   } else if (path === 'data/productos.json') {
     event.respondWith(networkFirst(request, local(path)));
   } else if (request.destination === 'image') {
@@ -69,7 +75,7 @@ self.addEventListener('fetch', event => {
       const cache = await caches.open(CACHE_NAME);
       return (await cache.match(local('img/placeholder.svg'))) || response;
     })());
-  } else if (['styles.css', 'app.js', 'catalog-model.js', 'install.js', 'manifest.json'].includes(path)) {
+  } else if (['styles.css', 'analytics.js', 'app.js', 'catalog-model.js', 'install.js', 'manifest.json'].includes(path)) {
     event.respondWith(networkFirst(request, request));
   }
 });

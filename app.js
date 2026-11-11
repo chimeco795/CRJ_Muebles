@@ -109,7 +109,7 @@
     return group;
   }
   function card(product, heading = 'h2', eager = false) {
-    const node = link('', `producto.html?id=${encodeURIComponent(product.id)}`, 'product-card');
+    const node = link('', `pieza-${encodeURIComponent(product.id)}.html`, 'product-card');
     const info = el('div', 'product-card-info');
     info.append(el('p', 'eyebrow', product.categoriaNombre), el(heading, '', product.nombre));
     const bottom = el('div', 'card-bottom');
@@ -161,6 +161,11 @@
       }
       function render() {
         const query = normalize(input.value);
+        let robots = document.querySelector('meta[name=robots]');
+        if (query && !robots) {
+          robots = document.createElement('meta');
+          robots.name = 'robots'; robots.content = 'noindex,follow'; document.head.append(robots);
+        } else if (!query && robots) robots.remove();
         const matching = products.filter(p => (category === 'todos' || p.categoria === category) && normalize(`${p.nombre} ${p.descripcion} ${p.categoriaNombre}`).includes(query));
         matching.sort((a, b) => Number(!a.imagen) - Number(!b.imagen) || Object.keys(CATEGORIES).indexOf(a.categoria) - Object.keys(CATEGORIES).indexOf(b.categoria));
         filters.querySelectorAll('button').forEach(node => node.setAttribute('aria-pressed', String(node.dataset.category === category)));
@@ -200,10 +205,12 @@
     $('meta[property="og:title"]').content = title; $('meta[property="og:description"]').content = description;
   }
   async function initProduct() {
-    const container = $('#product-detail'); loading(container);
+    const container = $('#product-detail');
+    if (!container.querySelector('article')) loading(container);
     try {
       const products = await loadProducts();
-      const product = products.find(p => p.id === new URLSearchParams(location.search).get('id'));
+      const id = /\/pieza-(\d+)\.html$/.exec(location.pathname)?.[1] || new URLSearchParams(location.search).get('id');
+      const product = products.find(p => p.id === id);
       if (!product) {
         const robots = document.createElement('meta');
         robots.name = 'robots'; robots.content = 'noindex'; document.head.append(robots);
@@ -211,13 +218,14 @@
         const actions = el('div', 'actions'); actions.append(link('Volver al catálogo', 'tienda.html', 'button button-primary'), link('Ir al inicio', 'index.html', 'button button-secondary'));
         state(container, 'Producto no encontrado', 'Esta pieza no está en nuestro catálogo. Puedes explorar las demás o volver al inicio.', actions, 'h1'); return;
       }
-      canonical(`producto.html?id=${encodeURIComponent(product.id)}`);
+      canonical(`pieza-${encodeURIComponent(product.id)}.html`);
       metadata(`${product.nombre} | CRJ Muebles`, product.descripcion);
+      if (location.pathname.endsWith('/producto.html')) history.replaceState(null, '', `pieza-${product.id}.html`);
       const article = el('article', 'product-detail'), content = el('div', 'product-copy');
       content.append(link(product.categoriaNombre, `tienda.html?categoria=${product.categoria}`, 'eyebrow category-link'), el('h1', '', product.nombre), el('p', 'product-price', priceText(product.precio)));
       if (product.stock === 0) content.append(el('p', 'small muted', 'Consultar disponibilidad'));
       if (product.descripcion.trim()) content.append(el('p', 'product-description', product.descripcion));
-      const url = new URL('producto.html', location.href); url.searchParams.set('id', product.id);
+      const url = new URL(`pieza-${product.id}.html`, location.href);
       const message = CRJCatalog.quoteMessage(product, url.href, priceText);
       const actions = el('div', 'product-contact'), wa = link('Consultar por WhatsApp ↗', whatsapp(message), 'button button-whatsapp'); wa.id = 'whatsapp-btn';
       actions.append(wa, el('p', 'small muted', 'Conversemos sobre esta pieza y lo que necesitas para tu espacio.'));

@@ -36,4 +36,4 @@ Folio 13: JPEG originales conservados en `public/img/products/muebles/cama-masco
 
 Folio 16: solo existen recortes pequenos de una infografia, sin originales independientes. Se mantienen frontal, superior y lateral a resolucion nativa; balance neutro conservado, luminosidad ×1.01, contraste ×1.015, mezcla de mediana 6%, enfoque radio 0.45/intensidad 20/umbral 4. WebP calidad 90. Se excluye vista-03 (detalle borroso). Recomendable reemplazar todas estas imagenes por fotografias originales de mayor resolucion; no se ha inventado detalle ni conservado publicidad temporal.
 
-Al agregar, retirar o cambiar la visibilidad de productos, ejecutar `node scripts/generate-sitemap.js` y publicar el `sitemap.xml` actualizado junto con el catálogo.
+Al cambiar datos, imágenes o visibilidad de productos o editar la plantilla producto.html, ejecutar `node scripts/generate-sitemap.js` y publicar las fichas generadas `pieza-*.html` y el `sitemap.xml` actualizado junto con el catálogo.

@@ -19,13 +19,13 @@ function validateCatalog(items, root = ROOT) {
 }
 function validateReferences(root = ROOT, items = []) {
   const errors = [], ids = new Set(items.map(p => String(p.id)));
-  for (const name of ['index.html','tienda.html','producto.html']) {
+  for (const name of fs.readdirSync(root).filter(file => file.endsWith('.html'))) {
     const html = fs.readFileSync(path.join(root, name), 'utf8');
     for (const match of html.matchAll(/(?:src|href)=["']([^"']+)["']/g)) {
       const ref = match[1];
       if (/^(?:[a-z]+:|#|\/\/)/i.test(ref)) continue;
       const url = new URL(ref, 'https://local.test/');
-      const file = decodeURIComponent(url.pathname.slice(1));
+      const file = decodeURIComponent(url.pathname.replace(/^\/(?:CRJ_Muebles\/)?/, ''));
       if (!fs.existsSync(path.join(root,file))) errors.push(`${name}: referencia inexistente ${ref}`);
       if (file === 'producto.html' && url.searchParams.has('id') && !ids.has(url.searchParams.get('id'))) errors.push(`${name}: enlace a folio inexistente ${url.searchParams.get('id')}`);
     }
